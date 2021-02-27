@@ -1,0 +1,52 @@
+@import 'reset';
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: sans-serif;
+}
+
+header,
+main,
+footer {
+  margin: clamp(1rem, 10vw, 4rem);
+}
+
+header,
+footer {
+  color: grey;
+  font-style: italic;
+}
+
+header {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+main {
+  color: black;
+  line-height: 1.5;
+}
+
+footer {
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+h1::after {
+  content: '\02026';
+}
+
+p {
+  margin: 1rem 0;
+}
+
+i {
+  color: grey;
+}

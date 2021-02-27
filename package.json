@@ -1,0 +1,16 @@
+{
+  "name": "oscarpalmer.se",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "concurrently": "^6.0.0",
+    "sass": "^1.32.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "npm run-script sass:build && eleventy",
+    "sass:build": "sass source/assets/css:build/assets/css --style=compressed --no-source-map",
+    "sass:watch": "sass source/assets/css:build/assets/css --watch --no-source-map",
+    "serve": "concurrently \"npm run-script sass:watch\" \"eleventy --serve\""
+  },
+  "version": "2021.02.27"
+}

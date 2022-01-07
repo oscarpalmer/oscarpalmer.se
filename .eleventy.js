@@ -2,7 +2,7 @@ const path = require('path');
 
 const sass = require('eleventy-plugin-dart-sass');
 
-const mode = process.env.ELEVENTY_MODE || 'production';
+const mode = process.env.ELEVENTY_MODE || 'development';
 const production = mode === 'production';
 
 const browserOptions = {

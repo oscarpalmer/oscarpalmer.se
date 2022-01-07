@@ -1,16 +1,15 @@
 {
   "name": "oscarpalmer.se",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "concurrently": "^6.0.0",
-    "sass": "^1.32.0"
+    "@11ty/eleventy": "1.0.0-canary.50",
+    "@11ty/eleventy-navigation": "^0.3.0",
+    "eleventy-plugin-dart-sass": "^1.0.0",
+    "html-minifier": "^4.0.0"
   },
   "private": true,
   "scripts": {
-    "build": "npm run-script sass:build && eleventy",
-    "sass:build": "sass source/assets/css:build/assets/css --style=compressed --no-source-map",
-    "sass:watch": "sass source/assets/css:build/assets/css --watch --no-source-map",
-    "serve": "concurrently \"npm run-script sass:watch\" \"eleventy --serve\""
+    "build": "ELEVENTY_MODE=production eleventy",
+    "serve": "ELEVENTY_MODE=development eleventy --serve"
   },
-  "version": "2021.02.27"
+  "version": "2022.01.07"
 }

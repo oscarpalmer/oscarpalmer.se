@@ -1,9 +1,6 @@
 const path = require('path');
 
-const sass = require('eleventy-plugin-dart-sass');
-
-const mode = process.env.ELEVENTY_MODE || 'development';
-const production = mode === 'production';
+const production = (process.env.ELEVENTY_MODE || 'development') === 'production';
 
 const browserOptions = {
   files: 'build/**/*',
@@ -17,13 +14,21 @@ const htmlOptions = {
   removeComments: true,
 };
 
+const i18nOptions = {
+  translations: require('./source/data/i18n'),
+  fallbackLocales: {
+    '*': 'sv',
+  },
+};
+
 const sassOptions = {
   domainName: 'https://oscarpalmer.se',
   outDir: path.normalize(path.join(__dirname, './build')),
   outFileName: 'styles',
+  outPath: '/assets/stylesheets/',
   outputStyle: production ? 'compressed' : 'expanded',
   sassIndexFile: 'styles.scss',
-  sassLocation: path.normalize(path.join(__dirname, './source/assets/css/')),
+  sassLocation: path.normalize(path.join(__dirname, './source/assets/stylesheets/')),
 };
 
 module.exports = (config) => {
@@ -40,14 +45,16 @@ module.exports = (config) => {
     });
   }
 
-  config.addPlugin(sass, sassOptions);
+  config.addPlugin(require('eleventy-plugin-i18n'), i18nOptions);
+  config.addPlugin(require('eleventy-plugin-dart-sass'), sassOptions);
 
   config.setBrowserSyncConfig(browserOptions);
 
   return {
     dir: {
-      input: 'source',
-      layouts: '_includes/layouts',
+      data: '../data',
+      input: 'source/pages',
+      layouts: '../layouts',
       output: 'build'
     },
     htmlTemplateEngine: 'njk',

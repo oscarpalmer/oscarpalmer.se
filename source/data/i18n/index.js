@@ -1,4 +1,4 @@
 module.exports = {
-  footer: require('./footer'),
-  meta: require('./meta'),
+	footer: require('./footer'),
+	meta: require('./meta'),
 };

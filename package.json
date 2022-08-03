@@ -13,5 +13,5 @@
     "build": "ELEVENTY_MODE=production eleventy",
     "serve": "ELEVENTY_MODE=development eleventy --serve"
   },
-  "version": "22.6.11"
+  "version": "22.8.3"
 }

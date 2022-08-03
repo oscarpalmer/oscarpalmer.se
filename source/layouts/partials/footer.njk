@@ -1,6 +1,6 @@
 <footer role="contentinfo">
-  <p>&copy; 1992&ndash;2022, {{ meta.author }}</p>
-  {% if page.url !== '/404.html' %}
-  <p><a href="{% if locale === 'en' %}/{% else %}/en/{% endif %}" hreflang="{% if locale === 'en' %}sv{% else %}en{% endif %}" rel="alternate">{{ 'footer.toggle' | i18n }}</a></p>
-  {% endif %}
+	<p>&copy; 1992&ndash;2022, {{ meta.author }}</p>
+	{% if page.url !== '/404.html' %}
+	<p><a href="{% if locale === 'en' %}/{% else %}/en/{% endif %}" hreflang="{% if locale === 'en' %}sv{% else %}en{% endif %}" rel="alternate">{{ 'footer.toggle' | i18n }}</a></p>
+	{% endif %}
 </footer>

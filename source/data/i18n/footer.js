@@ -1,6 +1,6 @@
 module.exports = {
-  toggle: {
-    en: 'På svenska?',
-    sv: 'In English?',
-  },
+	toggle: {
+		en: 'På svenska?',
+		sv: 'In English?',
+	},
 };

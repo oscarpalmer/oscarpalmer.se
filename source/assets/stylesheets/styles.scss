@@ -1,67 +1,67 @@
-@import '../../../node_modules/sanitize.css/system-ui';
-@import '../../../node_modules/sanitize.css/ui-monospace';
-@import '../../../node_modules/sanitize.css/sanitize';
-@import '../../../node_modules/sanitize.css/typography';
-@import '../../../node_modules/sanitize.css/assets';
-@import '../../../node_modules/sanitize.css/forms';
-@import '../../../node_modules/sanitize.css/reduce-motion';
+@use '../../../node_modules/sanitize.css/system-ui';
+@use '../../../node_modules/sanitize.css/ui-monospace';
+@use '../../../node_modules/sanitize.css/sanitize';
+@use '../../../node_modules/sanitize.css/typography';
+@use '../../../node_modules/sanitize.css/assets';
+@use '../../../node_modules/sanitize.css/forms';
+@use '../../../node_modules/sanitize.css/reduce-motion';
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  font-family: sans-serif;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	font-family: sans-serif;
 }
 
 header,
 main,
 footer {
-  margin: clamp(1rem, 10vw, 4rem);
+	margin: clamp(1rem, 10vw, 4rem);
 }
 
 header,
 footer {
-  color: grey;
-  font-style: italic;
+	color: #666;
+	font-style: italic;
 }
 
 header {
-  margin-bottom: 0;
-  line-height: 1;
+	margin-bottom: 0;
+	line-height: 1;
 }
 
 main {
-  color: black;
-  line-height: 1.5;
+	color: #222;
+	line-height: 1.5;
 }
 
 footer {
-  margin-top: 0;
-  line-height: 1.25;
+	margin-top: 0;
+	line-height: 1.25;
 }
 
 h1,
 h2 {
-  font-size: 1em;
+	font-size: 1em;
 }
 
 h1 {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 header h1 {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 p {
-  margin: 1rem 0;
+	margin: 1rem 0;
 }
 
 i {
-  color: grey;
+	color: #666;
 }

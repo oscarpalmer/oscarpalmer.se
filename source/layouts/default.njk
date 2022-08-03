@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="{{ locale | default('sv') }}" dir="ltr">
 <head>
-  {% include './partials/head.njk' %}
+	{% include './partials/head.njk' %}
 </head>
 <body>
-  {% include './partials/header.njk' %}
-  <main role="main">{{ content | safe }}</main>
-  {% include './partials/footer.njk' %}
+	{% include './partials/header.njk' %}
+	<main role="main">{{ content | safe }}</main>
+	{% include './partials/footer.njk' %}
 </body>
 </html>

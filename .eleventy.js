@@ -1,46 +1,48 @@
 const path = require('path');
 
-const production = (process.env.ELEVENTY_MODE || 'development') === 'production';
-const timestamp = Date.now();
-
-const browserOptions = {
-	files: 'build/**/*',
-	port: 4567,
-	ui: false
+const environment = {
+	production: (process.env.ELEVENTY_MODE || 'development') === 'production',
+	timestamp: Date.now(),
 };
 
-const htmlOptions = {
-	collapseWhitespace: true,
-	decodeEntities: true,
-	removeComments: true,
-};
-
-const i18nOptions = {
-	translations: require('./source/data/i18n'),
-	fallbackLocales: {
-		'*': 'sv',
+const options = {
+	browser: {
+		port: 4567,
+	},
+	
+	html: {
+		collapseWhitespace: true,
+		decodeEntities: true,
+		removeComments: true,
+	},
+	
+	i18n: {
+		translations: require('./source/data/i18n'),
+		fallbackLocales: {
+			'*': 'sv',
+		},
+	},
+	
+	sass: {
+		domainName: 'https://oscarpalmer.se',
+		outDir: path.normalize(path.join(__dirname, './build')),
+		outFileName: environment.production ? `styles.${environment.timestamp}`: 'styles',
+		outPath: '/assets/stylesheets/',
+		outputStyle: environment.production ? 'compressed' : 'expanded',
+		sassIndexFile: 'styles.scss',
+		sassLocation: path.normalize(path.join(__dirname, './source/assets/stylesheets/')),
 	},
 };
 
-const sassOptions = {
-	domainName: 'https://oscarpalmer.se',
-	outDir: path.normalize(path.join(__dirname, './build')),
-	outFileName: production ? `styles.${timestamp}`: 'styles',
-	outPath: '/assets/stylesheets/',
-	outputStyle: production ? 'compressed' : 'expanded',
-	sassIndexFile: 'styles.scss',
-	sassLocation: path.normalize(path.join(__dirname, './source/assets/stylesheets/')),
-};
-
 module.exports = (config) => {
-	config.addGlobalData('production', production);
+	config.addGlobalData('production', environment.production);
 
-	if (production) {
+	if (environment.production) {
 		const html = require('html-minifier');
 
 		config.addTransform('html', (content, path) => {
 			return path.endsWith('.html')
-				? html.minify(content.replace('styles.css', `styles.${timestamp}.css`), htmlOptions)
+				? html.minify(content.replace('styles.css', `styles.${environment.timestamp}.css`), options.html)
 				: content;
 		});
 	}
@@ -49,10 +51,10 @@ module.exports = (config) => {
 		'source/.htaccess': '.htaccess',
 	});
 
-	config.addPlugin(require('eleventy-plugin-i18n'), i18nOptions);
-	config.addPlugin(require('eleventy-plugin-dart-sass'), sassOptions);
+	config.addPlugin(require('eleventy-plugin-i18n'), options.i18n);
+	config.addPlugin(require('eleventy-plugin-dart-sass'), options.sass);
 
-	config.setBrowserSyncConfig(browserOptions);
+	config.setServerOptions(options.browser);
 
 	return {
 		dir: {

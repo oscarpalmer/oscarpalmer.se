@@ -65,3 +65,15 @@ p {
 i {
 	color: #666;
 }
+
+.error {
+	padding: 0 0 0 2rem;
+	margin: 1rem 0;
+	position: relative;
+
+	&__flag {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

@@ -1,16 +1,19 @@
 {
-  "name": "oscarpalmer.se",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "eleventy-plugin-dart-sass": "^1.0.0",
+	"name": "oscarpalmer.se",
+	"devDependencies": {
+		"@11ty/eleventy": "3.0.0-alpha.5",
+		"@biomejs/biome": "^1.6",
+		"@oscarpalmer/atoms": "^0.31",
+		"bun": "^1",
+		"eleventy-plugin-dart-sass": "^1.0.0",
 		"eleventy-plugin-i18n": "^0.1.0",
-    "html-minifier": "^4.0.0",
-    "sanitize.css": "^13.0.0"
-  },
-  "private": true,
-  "scripts": {
-    "build": "ELEVENTY_MODE=production eleventy",
-    "serve": "ELEVENTY_MODE=development eleventy --serve"
-  },
-  "version": "23.2.13"
+		"html-minifier": "^4.0.0"
+	},
+	"private": true,
+	"scripts": {
+		"build": "ELEVENTY_MODE=production eleventy",
+		"serve": "ELEVENTY_MODE=development eleventy --serve"
+	},
+	"type": "module",
+	"version": "24.3.24"
 }

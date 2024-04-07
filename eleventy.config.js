@@ -1,8 +1,7 @@
-import i18nPlugin from 'eleventy-plugin-i18n';
 import sassPlugin from 'eleventy-plugin-dart-sass';
 import {minify as minifyHtml} from 'html-minifier';
-import * as path from 'path';
-import i18n from './data/i18n/index.js';
+import * as path from 'node:path';
+import {filters} from './11ty/index.js';
 
 const environment = {
 	production: (process.env.ELEVENTY_MODE || 'development') === 'production',
@@ -12,18 +11,11 @@ const options = {
 	browser: {
 		port: 4567,
 	},
-	
+
 	html: {
 		collapseWhitespace: true,
 		decodeEntities: true,
 		removeComments: true,
-	},
-
-	i18n: {
-		translations: i18n,
-		fallbackLocales: {
-			'*': 'sv',
-		},
 	},
 
 	sass: {
@@ -32,12 +24,23 @@ const options = {
 		outPath: '/assets/stylesheets/',
 		outputStyle: environment.production ? 'compressed' : 'expanded',
 		sassIndexFile: 'styles.scss',
-		sassLocation: path.normalize(path.join(path.dirname('./'), './source/assets/stylesheets/')),
+		sassLocation: path.normalize(
+			path.join(path.dirname('./'), './source/assets/stylesheets/'),
+		),
 	},
 };
 
 export default (config) => {
 	config.addGlobalData('production', environment.production);
+
+	config.addFilter('ariaCurrent', filters.getAriaCurrentFromUrl);
+	config.addFilter('i18n', filters.internationalise);
+	config.addFilter('locale', filters.getLocale);
+	config.addFilter('markdown', filters.renderMarkdown);
+
+	config.addPlugin(sassPlugin, options.sass);
+
+	config.setServerOptions(options.browser);
 
 	if (environment.production) {
 		config.addTransform('html', (content, path) => {
@@ -47,20 +50,16 @@ export default (config) => {
 		});
 	}
 
-	config.addPlugin(i18nPlugin, options.i18n);
-	config.addPlugin(sassPlugin, options.sass);
-
-	config.setServerOptions(options.browser);
-
 	return {
 		dir: {
 			data: '../../data',
+			includes: '../layouts/partials',
 			input: 'source/pages',
 			layouts: '../layouts',
-			output: 'build'
+			output: 'build',
 		},
-		htmlTemplateEngine: 'njk',
-		markdownTemplateEngine: 'njk',
+		htmlTemplateEngine: 'liquid',
+		markdownTemplateEngine: 'liquid',
 		passthroughFileCopy: true,
 	};
 };

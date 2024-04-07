@@ -3,11 +3,11 @@
 	"devDependencies": {
 		"@11ty/eleventy": "3.0.0-alpha.5",
 		"@biomejs/biome": "^1.6",
-		"@oscarpalmer/atoms": "^0.31",
-		"bun": "^1",
-		"eleventy-plugin-dart-sass": "^1.0.0",
-		"eleventy-plugin-i18n": "^0.1.0",
-		"html-minifier": "^4.0.0"
+		"@oscarpalmer/atoms": "^0.33",
+		"bun": "^1.1",
+		"eleventy-plugin-dart-sass": "^1",
+		"html-minifier": "^4",
+		"markdown-it": "^14.1"
 	},
 	"private": true,
 	"scripts": {
@@ -15,5 +15,5 @@
 		"serve": "ELEVENTY_MODE=development eleventy --serve"
 	},
 	"type": "module",
-	"version": "24.3.24"
+	"version": "24.4.7"
 }

@@ -1,0 +1,17 @@
+{% assign description = pages.contact.description %}
+{% assign title = pages.contact.title %}
+{% layout 'page' %}
+{% block content %}
+<h1>{{ pages.contact.title | i18n }}</h1>
+<ul>
+	{% for link in pages.contact.links %}
+		<li>
+			<span>{{ link.label | i18n }}</span>
+			<a href="{{ link.url }}">
+			<span>{{ link.value }}</span>
+			{% if link.suffix %}<span>{{ link.suffix | i18n }}</span>{% endif %}
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+{% endblock %}

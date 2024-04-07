@@ -1,0 +1,9 @@
+<!doctype html>
+<html dir="ltr" lang="{{ page.url | locale }}">
+{% include 'head' %}
+<body>
+{% include 'header' %}
+<main role="main">{% block content %}{% endblock %}</main>
+{% include 'footer' %}
+</body>
+</html>

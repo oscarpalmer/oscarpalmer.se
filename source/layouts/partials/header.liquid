@@ -1,0 +1,10 @@
+<header role="banner">
+	<a href="{{ pages.home.url | i18n }}">{{ meta.author }}</a>
+	<nav role="navigation">
+		<ul>
+			{% for item in urls.navigation %}<li>
+				<a href="{{ item.url | i18n }}" {{ item.url | ariaCurrent }}>{{ item.title | i18n }}</a>
+			</li>{% endfor %}
+		</ul>
+	</nav>
+</header>

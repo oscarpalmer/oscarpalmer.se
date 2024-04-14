@@ -1,0 +1,25 @@
+{% assign description = pages.error.description %}
+{% assign error = true %}
+{% assign title = '404' %}
+<!doctype html>
+<html dir="ltr" lang="sv">
+{% include 'head' %}
+<body>
+<main role="main">
+	<header>
+		<h1>404 &ndash; Sida ej funnen</h2>
+	</header>
+	<section>
+		<p>
+			<span aria-hidden="true">🇸🇪</span>
+			<span>Sidan du försöker besöka verkar inte finnas… vill du <a href="/">gå hem</a>, i stället?</span>
+		</p>
+		<p lang="en">
+			<span aria-hidden="true">🇬🇧</span>
+			<span>The page you're trying to visit doesn't seem to exist… would you like to <a href="/en/">go home</a>, instead?</span>
+		</p>
+	</section>
+</main>
+</body>
+</html>
+

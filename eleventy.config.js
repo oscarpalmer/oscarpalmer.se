@@ -1,11 +1,15 @@
 import sassPlugin from 'eleventy-plugin-dart-sass';
 import {minify as minifyHtml} from 'html-minifier';
 import * as path from 'node:path';
-import {filters} from './11ty/index.js';
+import {codes, filters} from './11ty/index.js';
+
+const domain = 'https://oscarpalmer.se';
 
 const environment = {
 	production: (process.env.ELEVENTY_MODE || 'development') === 'production',
 };
+
+const now = new Date();
 
 const options = {
 	browser: {
@@ -19,8 +23,9 @@ const options = {
 	},
 
 	sass: {
-		domainName: 'https://oscarpalmer.se',
+		domainName: domain,
 		outDir: path.normalize(path.join(path.dirname('./'), './build')),
+		outFileName: 'styles',
 		outPath: '/assets/stylesheets/',
 		outputStyle: environment.production ? 'compressed' : 'expanded',
 		sassIndexFile: 'styles.scss',
@@ -31,12 +36,33 @@ const options = {
 };
 
 export default (config) => {
+	config.addGlobalData(
+		'canonicalUrl',
+		environment.production ? domain : 'http://localhost:4567',
+	);
+
 	config.addGlobalData('production', environment.production);
 
+	config.addGlobalData('timestamp', {
+		iso: now.toISOString(),
+		unix: now.getTime(),
+	});
+
+	config.addGlobalData('version', process.env.ELEVENTY_VERSION || '???');
+
 	config.addFilter('ariaCurrent', filters.getAriaCurrentFromUrl);
+	config.addFilter('icon', filters.icon);
 	config.addFilter('i18n', filters.internationalise);
 	config.addFilter('locale', filters.getLocale);
 	config.addFilter('markdown', filters.renderMarkdown);
+
+	config.addShortcode('getDescription', codes.getDescription);
+	config.addShortcode('getTitle', codes.getTitle);
+
+	config.addPassthroughCopy({
+		'source/assets/images': 'assets/images',
+		'source/robots.txt': 'robots.txt',
+	});
 
 	config.addPlugin(sassPlugin, options.sass);
 

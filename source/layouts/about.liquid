@@ -2,5 +2,51 @@
 {% assign title = pages.about.title %}
 {% layout 'page' %}
 {% block content %}
-<h1>{{ pages.about.title | i18n }}</h1>
+<aside>
+	<figure style="max-width: 15rem">
+		<img src="assets/images/selfie.jpg" alt="{{ pages.about.photo.alt | i18n }}" width="100">
+		<figcaption>
+			<span>{{ pages.about.quickie.name }}</span>
+			<span>{{ pages.about.quickie.age }}</span>
+			<span>{{ pages.about.quickie.pronouns | i18n }}</span>
+			<span>🏳️‍🌈&nbsp;queer</span>
+		</figcaption>
+	</figure>
+</aside>
+<article>
+	<header>
+		<h2>{{ pages.about.intro.title | i18n }}</h2>
+	</header>
+	<div>
+		{{ pages.about.intro.content | markdown }}
+	</div>
+</article>
+<article>
+	<header>
+		<h2>{{ pages.about.favourites.title | i18n }}</h2>
+	</header>
+	<div>
+		{{ pages.about.favourites.description | markdown }}
+	</div>
+	<ul">
+		{% for favourite in pages.about.favourites.items %}
+		<li>
+			<a href="{{ favourite.url }}" aria-describedby="{{ favourite.id }}" data-description="{{ favourite.description | i18n }}">
+				{% if favourite.icon %}{{ favourite.icon | icon }}{% endif %}
+					<span>{{ favourite.title | i18n }}</span>
+				</a>
+				<p id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</article>
+<article>
+	<header>
+		<h2>{{ pages.about.biography.title | i18n }}</h2>
+	</header>
+	<div>
+		{{ pages.about.biography.content | markdown }}
+		<span aria-hidden="true">🖖</span>
+	</div>
+</article>
 {% endblock %}

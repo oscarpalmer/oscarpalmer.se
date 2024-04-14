@@ -2,5 +2,37 @@
 {% assign title = pages.projects.title %}
 {% layout 'page' %}
 {% block content %}
-<h1>{{ pages.projects.title | i18n }}</h1>
+<article>
+	<header>
+		<h2>{{ pages.projects.work.title | i18n }}</h2>
+		<p>{{ pages.projects.work.description | i18n }}</p>
+	</header>
+	<ul>
+		{% for project in pages.projects.work.items %}
+			<li>
+				<header>
+					<h3>{{ project.icon | icon }}{{ project.title | i18n }}</h3>
+				</header>
+				<div>{{ project.description | markdown }}</div>
+			</li>
+		{% endfor %}
+	</ul>
+</article>
+<article>
+	<header>
+		<h2>{{ pages.projects.personal.title | i18n }}</h2>
+		<p>{{ pages.projects.personal.description | i18n }}</p>
+	</header>
+	<ul>
+		{% for project in pages.projects.personal.items %}
+			<li>
+				<header>
+					<h3><a href="{{ project.url }}">{{ project.icon | icon }}{{ project.title }}</a></h3>
+				</header>
+				<div>{{ project.description | markdown }}</div>
+			</li>
+		{% endfor %}
+		<li>{{ pages.projects.personal.suffix | i18n }}</li>
+	</ul>
+</article>
 {% endblock %}

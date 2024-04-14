@@ -3,7 +3,15 @@
 {% include 'head' %}
 <body>
 {% include 'header' %}
-<main role="main">{% block content %}{% endblock %}</main>
+<main role="main">
+	{% if title %}
+	<header>
+		<h1>{{ title | i18n }}</h1>
+		{% if description %}<p>{{ description | i18n }}</p>{% endif %}
+	</header>
+	{% endif %}
+	{% block content %}{% endblock %}
+</main>
 {% include 'footer' %}
 </body>
 </html>

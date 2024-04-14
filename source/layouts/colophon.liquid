@@ -2,5 +2,5 @@
 {% assign title = pages.colophon.title %}
 {% layout 'page' %}
 {% block content %}
-<h1>{{ pages.colophon.title | i18n }}</h1>
+<article>{{ pages.colophon.content | markdown : pages.colophon.links }}</article>
 {% endblock %}

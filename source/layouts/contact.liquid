@@ -2,16 +2,26 @@
 {% assign title = pages.contact.title %}
 {% layout 'page' %}
 {% block content %}
-<h1>{{ pages.contact.title | i18n }}</h1>
-<ul>
-	{% for link in pages.contact.links %}
+<article>
+	<header class="visually-hidden">
+		<h2>{{ pages.contact.intro.title | i18n }}</h2>
+	</header>
+	<div>{{ pages.contact.intro.content | markdown }}</div>
+</article>
+<article>
+	<header class="visually-hidden">
+		<h2>{{ pages.contact.links.title | i18n }}</h2>
+	</header>
+	<ul>
+	{% for link in pages.contact.links.items %}
 		<li>
-			<span>{{ link.label | i18n }}</span>
+			<span>{% if link.icon %}{{ link.icon | icon }}{% endif %}{{ link.label | i18n }}</span>
 			<a href="{{ link.url }}">
-			<span>{{ link.value }}</span>
-			{% if link.suffix %}<span>{{ link.suffix | i18n }}</span>{% endif %}
+				<span>{{ link.value }}</span>
+				{% if link.suffix %}<i>{{ link.suffix | i18n }}</i>{% endif %}
 			</a>
 		</li>
 	{% endfor %}
 </ul>
+</article>
 {% endblock %}

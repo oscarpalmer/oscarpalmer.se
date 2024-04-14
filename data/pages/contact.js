@@ -1,17 +1,12 @@
+import {getMarkdown} from '../../11ty/index.js';
+
 export default {
 	description: {
 		en: 'A collection of links and other ways to get in touch with me.',
 		sv: 'En samling länkar och andra sätt att komma i kontakt med mig.',
 	},
 	intro: {
-		content: {
-			en: `I'm not the most active when it comes to posting things on social media, but I read and watch a lot, so I'll probably see your message if it pops up. <span aria-hidden="true">😉</span>
-
-If it's a bit more "urgent", please send an email. ✌️`,
-			sv: `Jag inte är den mest aktiva när det kommer till att publicera saker på sociala medier, men jag läser och tittar på mycket, så jag ser nog ditt meddelande om det dyker upp. <span aria-hidden="true">😉</span>
-
-Om det är lite mer "akut", skicka gärna ett mejl. <span aria-hidden="true">✌️</span>`,
-		},
+		content: getMarkdown('contact/intro'),
 		title: {
 			en: 'Introduction',
 			sv: 'Introduktion',

@@ -3,7 +3,7 @@
 {% include 'head' %}
 <body>
 {% include 'header' %}
-<main role="main">
+<main class="page__{{ slug }}" id="content">
 	{% if title %}
 	<header>
 		<h1>{{ title | i18n }}</h1>
@@ -13,5 +13,7 @@
 	{% block content %}{% endblock %}
 </main>
 {% include 'footer' %}
+{% if slug == 'home' %}
+<script src="/assets/javascript/fancy-stars.js"></script>{% endif %}
 </body>
 </html>

@@ -1,9 +1,10 @@
-<footer role="contentinfo">
-	<section>
-		<p>&copy; 2024, {{ meta.author }}</p>
-	</section>
-	<section>
+<footer>
+	<div>
+		<section>
+			<p>&copy; 2024, {{ meta.author }}</p>
+			<p>{{ footer.colophon.prefix | i18n }} <a href="{{ pages.colophon.url | i18n }}" {{ pages.colophon.url | ariaCurrent
+					}}>{{ footer.colophon.suffix | i18n }}</a>.</p>
+		</section>
 		<p>{{ footer.i18n.prefix | i18n }} <a href="{{ urls.store[page.url] }}">{{ footer.i18n.suffix | i18n }}</a></p>
-		<p>{{ footer.colophon.prefix | i18n }} <a href="{{ pages.colophon.url | i18n }}" {{ pages.colophon.url | ariaCurrent }}>{{ footer.colophon.suffix | i18n }}</a>.</p>
-	</section>
+	</div>
 </footer>

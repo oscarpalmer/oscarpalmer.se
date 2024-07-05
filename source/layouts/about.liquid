@@ -1,48 +1,52 @@
 {% assign description = pages.about.description %}
+{% assign slug = 'about' %}
 {% assign title = pages.about.title %}
 {% layout 'page' %}
 {% block content %}
 <aside>
-	<figure style="max-width: 15rem">
-		<img src="assets/images/selfie.jpg" alt="{{ pages.about.photo.alt | i18n }}" width="100">
+	<figure>
+		<img src="assets/images/selfie.jpg" alt="{{ pages.about.photo.alt | i18n }}">
 		<figcaption>
-			<span>{{ pages.about.quickie.name }}</span>
-			<span>{{ pages.about.quickie.age }}</span>
-			<span>{{ pages.about.quickie.pronouns | i18n }}</span>
-			<span>🏳️‍🌈&nbsp;queer</span>
+			<p aria-label="{{ pages.about.quickie.paragraph | i18n }}" role="note">
+				<span aria-hidden="true">{{ pages.about.quickie.name }}</span>
+				<span aria-hidden="true">{{ pages.about.quickie.age }}</span>
+				<span aria-hidden="true">{{ pages.about.quickie.pronouns | i18n }}</span>
+				<span aria-hidden="true">🏳️‍🌈&nbsp;queer</span>
+			</p>
 		</figcaption>
 	</figure>
 </aside>
-<article>
+<article aria-labelledby="intro_title">
 	<header>
-		<h2>{{ pages.about.intro.title | i18n }}</h2>
+		<h2 id="intro_title">{{ pages.about.intro.title | i18n }}</h2>
 	</header>
 	<div>
 		{{ pages.about.intro.content | markdown }}
 	</div>
 </article>
-<article>
+<hr>
+<article aria-labelledby="favourites_title">
 	<header>
-		<h2>{{ pages.about.favourites.title | i18n }}</h2>
+		<h2 id="favourites_title">{{ pages.about.favourites.title | i18n }}</h2>
+		<p>{{ pages.about.favourites.description | markdown }}</p>
 	</header>
-	<div>
-		{{ pages.about.favourites.description | markdown }}
-	</div>
-	<ul">
+	<ul>
 		{% for favourite in pages.about.favourites.items %}
 		<li>
-			<a href="{{ favourite.url }}" aria-describedby="{{ favourite.id }}" data-description="{{ favourite.description | i18n }}">
+			<a href="{{ favourite.url }}" aria-describedby="{{ favourite.id }}"
+				data-description="{{ favourite.description | i18n }}">
 				{% if favourite.icon %}{{ favourite.icon | icon }}{% endif %}
-					<span>{{ favourite.title | i18n }}</span>
+				<span>{{ favourite.title | i18n }}</span>
 				</a>
 				<p id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
 		</li>
 		{% endfor %}
-	</ul>
+		</ul>
 </article>
-<article>
+<hr>
+<article aria-labelledby="biography_title">
 	<header>
-		<h2>{{ pages.about.biography.title | i18n }}</h2>
+		<h2 id="biography_title">{{ pages.about.biography.title | i18n }}</h2>
 	</header>
 	<div>
 		{{ pages.about.biography.content | markdown }}

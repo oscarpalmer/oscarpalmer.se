@@ -1,4 +1,4 @@
-Vad kul att du tycker detta är intressat, för det gör ju jag också såklart! 😊
+Vad kul att du tycker detta är intressat, för det gör ju jag också såklart! <span aria-hidden="true">😊</span>
 
 Innehållet på denna sida är för det mesta skriven i {{markdown}}, medan jag skriver sidmallar med hjälp av {{liquid}}.
 
@@ -12,4 +12,4 @@ För att baka ihop alla källfiler så använder jag {{eleventy}} – vilket är
 
 Sidan hostas på {{cloudflare}}, men jag har tidigare använt {{digitalocean}}… och jag är säkert tillbaka där igen snart. Domännamnet är köpt hos {{iwantmyname}}.
 
-Saknas något? [Pinga mig](/kontakt/), eller kolla in [källkoden på GitHub](https://github.com/oscarpalmer/oscarpalmer.se). 🤓
+Saknas något? [Pinga mig](/kontakt/), eller kolla in [källkoden på GitHub](https://github.com/oscarpalmer/oscarpalmer.se). <span aria-hidden="true">🤓</span>

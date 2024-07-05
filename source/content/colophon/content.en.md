@@ -1,4 +1,4 @@
-How nice that you find this interesting, because I do too, of course! 😊
+How nice that you find this interesting, because I do too, of course! <span aria-hidden="true">😊</span>
 
 The content on this page is mostly written in {{markdown}}, while I write page templates using {{liquid}}.
 
@@ -10,6 +10,6 @@ I write and develop everything in {{nova}} <i>(or {{vscode}})</i> and test it <i
 
 To bundle all the source files together, I use {{eleventy}} – which is a great and extensible static site generator – together with {{bun}} as a build tool.
 
-The site is hosted on {{cloudflare}}, but I have previously used {{digitalocean}}… and I'm sure I'll be back there soon. The domain name is bought via {{iwantmyname}}.
+The site is hosted on {{cloudflare}}, but I have previously used {{digitalocean}}… and I'm sure I'll be back there soon. The domain name is provided via {{iwantmyname}}.
 
-Missing anything? [Let me know](/en/contact/), or check out [the source code on GitHub](https://github.com/oscarpalmer/oscarpalmer.se). 🤓
+Missing anything? [Let me know](/en/contact/), or check out [the source code on GitHub](https://github.com/oscarpalmer/oscarpalmer.se). <span aria-hidden="true">🤓</span>

@@ -50,6 +50,7 @@ export default (config) => {
 
 	config.addGlobalData('version', process.env.ELEVENTY_VERSION || '???');
 
+	config.addFilter('altLocale', filters.getAlternateLocale);
 	config.addFilter('ariaCurrent', filters.getAriaCurrentFromUrl);
 	config.addFilter('icon', filters.icon);
 	config.addFilter('i18n', filters.internationalise);
@@ -61,7 +62,9 @@ export default (config) => {
 
 	config.addPassthroughCopy({
 		'source/assets/images': 'assets/images',
+		'source/assets/javascript': 'assets/javascript',
 		'source/robots.txt': 'robots.txt',
+		'source/site.webmanifest': 'site.webmanifest',
 	});
 
 	config.addPlugin(sassPlugin, options.sass);

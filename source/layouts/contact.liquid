@@ -1,16 +1,18 @@
 {% assign description = pages.contact.description %}
+{% assign slug = 'contact' %}
 {% assign title = pages.contact.title %}
 {% layout 'page' %}
 {% block content %}
-<article>
+<article aria-labelledby="intro_title">
 	<header class="visually-hidden">
-		<h2>{{ pages.contact.intro.title | i18n }}</h2>
+		<h2 id="intro_title">{{ pages.contact.intro.title | i18n }}</h2>
 	</header>
 	<div>{{ pages.contact.intro.content | markdown }}</div>
 </article>
-<article>
+<hr>
+<article aria-labelledby="links_title">
 	<header class="visually-hidden">
-		<h2>{{ pages.contact.links.title | i18n }}</h2>
+		<h2 id="links_title">{{ pages.contact.links.title | i18n }}</h2>
 	</header>
 	<ul>
 	{% for link in pages.contact.links.items %}

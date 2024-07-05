@@ -4,7 +4,7 @@ import filters from './filters.js';
 function getDescription() {
 	return filters.internationalise.call(
 		this,
-		this.description == null ? meta.description : this.description,
+		this.description ?? meta.description,
 	);
 }
 

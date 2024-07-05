@@ -13,6 +13,10 @@ const md = new MarkdownIt({
 	html: true,
 });
 
+function getAlternateLocale(url) {
+	return url.startsWith('/en/') ? 'sv' : 'en';
+}
+
 function getAriaCurrentFromUrl(value) {
 	const url =
 		typeof value === 'object' && value !== null
@@ -54,6 +58,7 @@ function renderMarkdown(value, links) {
 }
 
 export default {
+	getAlternateLocale,
 	getAriaCurrentFromUrl,
 	getLocale,
 	icon,

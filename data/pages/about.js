@@ -84,6 +84,7 @@ export default {
 					sv: 'En av mina favoritstreamers som gör mycket skoj, ofta med vänner, antingen i köket eller runt om i Austin.',
 				},
 				icon: 'brand-twitch',
+				id: 'nmplol',
 				title: 'Nmplol',
 				url: 'https://www.twitch.tv/nmplol',
 			},
@@ -129,6 +130,10 @@ export default {
 	quickie: {
 		age: 32,
 		name: 'Oscar',
+		paragraph: {
+			en: 'Oscar (Carl Anders) Palmér; 32 years old, born January 2nd, 1992; using he/him pronouns; a bit queer',
+			sv: 'Oscar (Carl Anders) Palmér; 32 år gammal, född 2 januari 1992; använder han/honom pronomen; lite queer',
+		},
 		pronouns: {
 			en: 'he/him',
 			sv: 'han/honom',

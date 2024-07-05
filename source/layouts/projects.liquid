@@ -1,10 +1,11 @@
 {% assign description = pages.projects.description %}
+{% assign slug = 'projects' %}
 {% assign title = pages.projects.title %}
 {% layout 'page' %}
 {% block content %}
-<article>
+<article aria-labelledby="work_title">
 	<header>
-		<h2>{{ pages.projects.work.title | i18n }}</h2>
+		<h2 id="work_title">{{ pages.projects.work.title | i18n }}</h2>
 		<p>{{ pages.projects.work.description | i18n }}</p>
 	</header>
 	<ul>
@@ -18,21 +19,23 @@
 		{% endfor %}
 	</ul>
 </article>
-<article>
+<hr>
+<article aria-labelledby="personal_title">
 	<header>
-		<h2>{{ pages.projects.personal.title | i18n }}</h2>
+		<h2 id="personal_title">{{ pages.projects.personal.title | i18n }}</h2>
 		<p>{{ pages.projects.personal.description | i18n }}</p>
 	</header>
 	<ul>
 		{% for project in pages.projects.personal.items %}
 			<li>
 				<header>
-					<h3><a href="{{ project.url }}">{{ project.icon | icon }}{{ project.title }}</a></h3>
+					<h3><a href="{{ project.url }}" hreflang="en">{{ project.icon | icon }}{{ project.title }}</a>
+					</h3>
 				</header>
 				<div>{{ project.description | markdown }}</div>
 			</li>
 		{% endfor %}
-		<li>{{ pages.projects.personal.suffix | i18n }}</li>
+		<li>{{ pages.projects.personal.suffix | i18n }} <a href="https://github.com/oscarpalmer" hreflang="en">GitHub</a>.</li>
 	</ul>
 </article>
 {% endblock %}

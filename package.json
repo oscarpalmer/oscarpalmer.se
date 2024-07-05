@@ -1,14 +1,14 @@
 {
 	"name": "oscarpalmer.se",
 	"devDependencies": {
-		"@11ty/eleventy": "3.0.0-alpha.6",
-		"@biomejs/biome": "^1.6",
-		"@oscarpalmer/atoms": "^0.37",
-		"@tabler/icons": "^3.2",
-		"bun": "^1.1",
-		"eleventy-plugin-dart-sass": "^1",
-		"html-minifier": "^4",
-		"markdown-it": "^14.1"
+		"@11ty/eleventy": "3.0.0-alpha.14",
+		"@biomejs/biome": "^1.8.3",
+		"@oscarpalmer/atoms": "^0.55.0",
+		"@tabler/icons": "^3.9.0",
+		"bun": "^1.1.18",
+		"eleventy-plugin-dart-sass": "^1.0.3",
+		"html-minifier": "^4.0.0",
+		"markdown-it": "^14.1.0"
 	},
 	"private": true,
 	"scripts": {
@@ -16,5 +16,5 @@
 		"serve": "ELEVENTY_MODE=development eleventy --quiet --serve"
 	},
 	"type": "module",
-	"version": "24.4.14"
+	"version": "24.7.5"
 }

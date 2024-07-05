@@ -58,8 +58,8 @@ export default {
 	},
 	work: {
 		description: {
-			en: 'A short list of work-related projects that I can actually talk about, without the authorities knocking on my door.',
-			sv: 'En kort lista av jobbrelaterade projekt som jag faktiskt kan prata om, utan att auktoriteterna kommer och knackar på dörren.',
+			en: 'A short list of work-related projects that I can actually talk about, without the authorities knocking on my door…',
+			sv: 'En kort lista av jobbrelaterade projekt som jag faktiskt kan prata om, utan att auktoriteterna kommer och knackar på dörren…',
 		},
 		items: [
 			{

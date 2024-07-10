@@ -1,0 +1,7 @@
+{% assign description = pages.about.colophon.description %}
+{% assign slug = 'about-colophon' %}
+{% assign title = pages.about.colophon.title %}
+{% layout 'page' %}
+{% block content %}
+<article class="stack stack-text">{{ pages.about.colophon.content | markdown: pages.about.colophon.links }}</article>
+{% endblock %}

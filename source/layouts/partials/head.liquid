@@ -1,54 +1,67 @@
 <head>
-  <base href="/">
+	<base href="/">
 
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 	<meta http-equiv="content-security-policy" content="default-src 'self'">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 	<title>{% getTitle %}</title>
-	
+
 	<link rel="stylesheet" href="assets/stylesheets/styles.css">
-	
+
 	<meta name="author" content="{{ meta.author }}">
 	<meta name="description" content="{% getDescription %}">
-	
+
 	<link rel="canonical" href="{{ canonicalUrl }}{{ page.url }}">
-	
+
 	{% unless error %}
-	<link rel="alternate" hreflang="{{ page.url | altLocale }}" href="{{ urls.store[page.url] }}">
+		<link
+			rel="alternate"
+			hreflang="{{ page.url | altLocale }}"
+			href="{{ urls.store[page.url] }}"
+		>
 	{% endunless %}
-	
+
 	<link rel="author" href="humans.txt">
-	<link rel="manifest" href="/site.webmanifest">
-	
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="any" href="/assets/images/favicon/favicon.ico">
-	
+	<link rel="manifest" href="site.webmanifest">
+
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="assets/images/favicon/apple-touch-icon.png"
+	>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="any"
+		href="assets/images/favicon/favicon.ico"
+	>
+
 	<meta name="color-scheme" content="light">
 	<meta name="generator" content="Eleventy v{{ version }}">
 	<meta name="supported-color-schemes" content="light">
 	<meta name="theme-color" content="#fff">
 
 	{% if error %}
-	<meta name="robots" content="noindex, nofollow">
+		<meta name="robots" content="noindex, nofollow">
 	{% else %}
-	<meta name="robots" content="index, follow">
+		<meta name="robots" content="index, follow">
 	{% endif %}
 
 	{% unless error %}
-	<meta property="og:author" content="{{ meta.author }}">
-	<meta property="og:description" content="{% getDescription %}">
-	<meta property="og:image" content="">
-	<meta property="og:site_name" content="{{ meta.author }}">
-	<meta property="og:title" content="{% getTitle %}">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="{{ canonicalUrl }}{{ page.url }}">
+		<meta property="og:author" content="{{ meta.author }}">
+		<meta property="og:description" content="{% getDescription %}">
+		<meta property="og:image" content="">
+		<meta property="og:site_name" content="{{ meta.author }}">
+		<meta property="og:title" content="{% getTitle %}">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ canonicalUrl }}{{ page.url }}">
 
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:creator" content="@ohpalmer">
-	<meta name="twitter:description" content="{% getDescription %}">
-	<meta name="twitter:site" content="@ohpalmer">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:creator" content="@ohpalmer">
+		<meta name="twitter:description" content="{% getDescription %}">
+		<meta name="twitter:site" content="@ohpalmer">
 	{% endunless %}
 </head>

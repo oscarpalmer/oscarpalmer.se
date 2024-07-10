@@ -1,10 +1,13 @@
-<footer>
-	<div>
-		<section>
-			<p>&copy; 2024, {{ meta.author }}</p>
-			<p>{{ footer.colophon.prefix | i18n }} <a href="{{ pages.colophon.url | i18n }}" {{ pages.colophon.url | ariaCurrent
-					}}>{{ footer.colophon.suffix | i18n }}</a>.</p>
-		</section>
-		<p>{{ footer.i18n.prefix | i18n }} <a href="{{ urls.store[page.url] }}">{{ footer.i18n.suffix | i18n }}</a></p>
-	</div>
+<footer class="footer stack stack-text">
+	<p>&copy; 2024, {{ meta.author }}</p>
+	<p>
+		{{ footer.colophon.prefix | i18n }}
+		<a href="{{ pages.about.colophon.url | i18n }}" {{ pages.about.colophon.url | ariaCurrent }}>
+			{{- footer.colophon.suffix | i18n -}}</a
+		>.
+	</p>
+	<p>
+		{{ footer.language.prefix | i18n }}
+		<a href="{{ urls.store[page.url] }}">{{ footer.language.suffix | i18n }}</a>
+	</p>
 </footer>

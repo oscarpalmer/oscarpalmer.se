@@ -1,12 +1,13 @@
-import about from './pages/about.js';
-import colophon from './pages/colophon.js';
+import aboutColophon from './pages/about/colophon.js';
+import aboutIndex from './pages/about/index.js';
+import aboutMe from './pages/about/me.js';
 import contact from './pages/contact.js';
 import home from './pages/home.js';
 import projects from './pages/projects.js';
 
-const navigation = [projects, about, contact];
+const navigation = [projects, aboutMe, contact];
 
-const all = [...navigation, colophon, home];
+const all = [...navigation, aboutColophon, aboutIndex, home];
 
 const urls = {};
 

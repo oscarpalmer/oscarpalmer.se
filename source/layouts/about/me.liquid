@@ -1,0 +1,65 @@
+{% assign description = pages.about.me.description %}
+{% assign slug = 'about-me' %}
+{% assign title = pages.about.me.title %}
+{% layout 'page' %}
+{% block content %}
+<aside class="page__about__selfie__wrapper">
+	<figure class="page__about__selfie">
+		<img
+			alt="{{ pages.about.me.photo.alt | i18n }}"
+			class="page__about__selfie__image"
+			src="assets/images/selfie.jpg"
+		>
+		<figcaption class="page__about__selfie__caption">
+			<p aria-label="{{ pages.about.me.quickie.paragraph | i18n }}" role="note">
+				<span aria-hidden="true">{{ pages.about.me.quickie.name }}</span>
+				<span aria-hidden="true">{{ pages.about.me.quickie.age }}</span>
+				<span aria-hidden="true">{{ pages.about.me.quickie.pronouns | i18n }}</span>
+				<span aria-hidden="true">🏳️‍🌈&nbsp;&nbsp;queer</span>
+			</p>
+		</figcaption>
+	</figure>
+</aside>
+<article aria-labelledby="intro_title" class="stack">
+	<header>
+		<h2 id="intro_title">{{ pages.about.me.intro.title | i18n }}</h2>
+	</header>
+	<div class="stack stack-text">
+		{{ pages.about.me.intro.content | markdown }}
+	</div>
+</article>
+<hr>
+<article aria-labelledby="biography_title" class="stack">
+	<header>
+		<h2 id="biography_title">{{ pages.about.me.biography.title | i18n }}</h2>
+	</header>
+	<div class="stack stack-text">
+		{{ pages.about.me.biography.content | markdown }}
+		<span aria-hidden="true">🖖</span>
+	</div>
+</article>
+<hr>
+<article aria-labelledby="favourites_title" class="stack">
+	<header class="stack">
+		<h2 id="favourites_title">{{ pages.about.me.favourites.title | i18n }}</h2>
+		<p>{{ pages.about.me.favourites.description | i18n }}</p>
+	</header>
+	<ul class="flow grid grid-small">
+		{% for favourite in pages.about.me.favourites.items %}
+			<li class="stack stack-text">
+				<a
+					aria-describedby="{{ favourite.id }}"
+					class="flow flow-text"
+					href="{{ favourite.url }}"
+				>
+					{% if favourite.icon %}
+						{{ favourite.icon | icon -}}
+					{%- endif %}
+					<span>{{ favourite.title | i18n }}</span>
+				</a>
+				<p id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
+			</li>
+		{% endfor %}
+	</ul>
+</article>
+{% endblock %}

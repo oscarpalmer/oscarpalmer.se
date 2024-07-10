@@ -10,11 +10,14 @@
 		"html-minifier": "^4.0.0",
 		"markdown-it": "^14.1.0"
 	},
+	"prettier": {
+		"useTabs": true
+	},
 	"private": true,
 	"scripts": {
 		"build": "ELEVENTY_MODE=production eleventy",
 		"serve": "ELEVENTY_MODE=development eleventy --quiet --serve"
 	},
 	"type": "module",
-	"version": "24.7.5"
+	"version": "24.7.10"
 }

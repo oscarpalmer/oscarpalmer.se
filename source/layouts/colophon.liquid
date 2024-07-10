@@ -1,7 +1,0 @@
-{% assign description = pages.colophon.description %}
-{% assign slug = 'colophon' %}
-{% assign title = pages.colophon.title %}
-{% layout 'page' %}
-{% block content %}
-<article>{{ pages.colophon.content | markdown : pages.colophon.links }}</article>
-{% endblock %}

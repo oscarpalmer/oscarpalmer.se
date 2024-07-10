@@ -9,7 +9,7 @@ export default {
 			sv: 'kolofonen',
 		},
 	},
-	i18n: {
+	language: {
 		prefix: {
 			en: 'Skulle du vilja läsa denna sida',
 			sv: 'Would you like to read this page',

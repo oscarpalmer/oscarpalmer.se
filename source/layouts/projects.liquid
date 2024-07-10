@@ -3,39 +3,49 @@
 {% assign title = pages.projects.title %}
 {% layout 'page' %}
 {% block content %}
-<article aria-labelledby="work_title">
-	<header>
+<article aria-labelledby="work_title" class="stack">
+	<header class="stack">
 		<h2 id="work_title">{{ pages.projects.work.title | i18n }}</h2>
 		<p>{{ pages.projects.work.description | i18n }}</p>
 	</header>
-	<ul>
+	<ul class="grid grid-large">
 		{% for project in pages.projects.work.items %}
-			<li>
+			<li class="stack stack-text">
 				<header>
-					<h3>{{ project.icon | icon }}{{ project.title | i18n }}</h3>
+					<h3 class="flow flow-text">
+						{{ project.icon | icon -}}
+						{{- project.title | i18n }}
+					</h3>
 				</header>
-				<div>{{ project.description | markdown }}</div>
+				<div class="stack stack-text">{{ project.description | markdown }}</div>
 			</li>
 		{% endfor %}
 	</ul>
 </article>
 <hr>
-<article aria-labelledby="personal_title">
-	<header>
+<article aria-labelledby="personal_title" class="stack">
+	<header class="stack">
 		<h2 id="personal_title">{{ pages.projects.personal.title | i18n }}</h2>
 		<p>{{ pages.projects.personal.description | i18n }}</p>
 	</header>
-	<ul>
+	<ul class="grid grid-large">
 		{% for project in pages.projects.personal.items %}
-			<li>
+			<li class="stack stack-text">
 				<header>
-					<h3><a href="{{ project.url }}" hreflang="en">{{ project.icon | icon }}{{ project.title }}</a>
+					<h3>
+						<a class="flow flow-text" href="{{ project.url }}" hreflang="en">
+							{{- project.icon | icon -}}
+							{{- project.title -}}
+						</a>
 					</h3>
 				</header>
-				<div>{{ project.description | markdown }}</div>
+				<div class="stack stack-text">{{ project.description | markdown }}</div>
 			</li>
 		{% endfor %}
-		<li>{{ pages.projects.personal.suffix | i18n }} <a href="https://github.com/oscarpalmer" hreflang="en">GitHub</a>.</li>
+		<li class="page__projects__personal__suffix">
+			{{ pages.projects.personal.suffix | i18n }}
+			<a href="https://github.com/oscarpalmer" hreflang="en">GitHub</a>.
+		</li>
 	</ul>
 </article>
 {% endblock %}

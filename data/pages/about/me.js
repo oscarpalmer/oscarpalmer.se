@@ -1,8 +1,8 @@
-import {getMarkdown} from '../../11ty/index.js';
+import {getMarkdown} from '../../../11ty/index.js';
 
 export default {
 	biography: {
-		content: getMarkdown('about/biography'),
+		content: getMarkdown('about/me/biography'),
 		title: {
 			en: 'A <i>(small)</i> biography',
 			sv: 'En <i>(liten)</i> biografi',
@@ -30,8 +30,8 @@ export default {
 			},
 			{
 				description: {
-					en: 'A collection of games and books in a fantasy world, with many interesting characters to get to know.',
-					sv: 'En samling spel och böcker i en fantasyvärld, med många intressanta karaktär att lära känna.',
+					en: 'A multimedia franchise in a fantasy world, with many interesting stories and characters to take part in and get to know.',
+					sv: 'En multimediafranchise i en fantasyvärld, med många intressanta berättelser och karaktärer att ta del av och lära känna.',
 				},
 				icon: 'device-gamepad-2',
 				id: 'dragon_age',
@@ -40,8 +40,8 @@ export default {
 			},
 			{
 				description: {
-					en: 'My favourite game world, with a lot to explore and discover.',
-					sv: 'Min favoritspelvärld, med mycket att utforska och upptäcka.',
+					en: 'One of my favourite game worlds, with a lot to explore and discover, often with a lot of weirdness.',
+					sv: 'En av min favoritspelvärldar, med mycket att utforska och upptäcka, ofta med mycket underligheter.',
 				},
 				icon: 'device-gamepad-2',
 				id: 'elder_scrolls',
@@ -50,8 +50,8 @@ export default {
 			},
 			{
 				description: {
-					en: 'My second favourite football club, which I have followed since 2004, when Henrik Larsson started playing for them.',
-					sv: 'Min andra favoritklubb i fotboll, som jag följt sedan 2004, då Henrik Larsson började spela för dem.',
+					en: 'My second favourite football club, which I have followed since 2004, when Henrik Larsson started playing for them. <i lang="ca">Més que un club</i><span aria-hidden="true">&nbsp;💕</span>',
+					sv: 'Min andra favoritklubb i fotboll, som jag följt sedan 2004, då Henrik Larsson började spela för dem. <i lang="ca">Més que un club</i><span aria-hidden="true">&nbsp;💕</span>',
 				},
 				icon: 'ball-football',
 				id: 'fc_barcelona',
@@ -80,8 +80,8 @@ export default {
 			},
 			{
 				description: {
-					en: 'One of my favourite streamers who does a lot of fun stuff, often with friends, either in the kitchen or around Austin.',
-					sv: 'En av mina favoritstreamers som gör mycket skoj, ofta med vänner, antingen i köket eller runt om i Austin.',
+					en: 'One of my favourite streamers who does a lot of fun stuff, often with friends, either in the kitchen or around Austin <i>(and elsewhere)</i>.',
+					sv: 'En av mina favoritstreamers som gör mycket skoj, ofta med vänner, antingen i köket eller runt om i Austin <i>(och andra ställen)</i>.',
 				},
 				icon: 'brand-twitch',
 				id: 'nmplol',
@@ -115,7 +115,7 @@ export default {
 		},
 	},
 	intro: {
-		content: getMarkdown('about/intro'),
+		content: getMarkdown('about/me/intro'),
 		title: {
 			en: 'An introduction',
 			sv: 'En introduktion',
@@ -144,7 +144,7 @@ export default {
 		sv: 'Om mig',
 	},
 	url: {
-		en: '/en/about-me/',
-		sv: '/om-mig/',
+		en: '/en/about/me/',
+		sv: '/om/mig/',
 	},
 };

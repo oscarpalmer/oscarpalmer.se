@@ -1,7 +1,7 @@
-import {getMarkdown} from '../../11ty/index.js';
+import {getMarkdown} from '../../../11ty/index.js';
 
 export default {
-	content: getMarkdown('colophon/content'),
+	content: getMarkdown('about/colophon/content'),
 	description: {
 		en: 'A rundown of all the stuff that built and powers this little website.',
 		sv: 'En översikt över allt som byggde och driver denna lilla webbplats.',
@@ -61,7 +61,7 @@ export default {
 		sv: 'Kolofon',
 	},
 	url: {
-		en: '/en/colophon/',
-		sv: '/kolofon/',
+		en: '/en/about/colophon/',
+		sv: '/om/kolofon/',
 	},
 };

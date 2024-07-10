@@ -4,23 +4,25 @@
 {% assign title = '404' %}
 <!doctype html>
 <html dir="ltr" lang="sv">
-{% include 'head' %}
-<body>
-<main role="main">
-	<header>
-		<h1>404 &ndash; Sida ej funnen</h2>
-	</header>
-	<section>
-		<p>
-			<span aria-hidden="true">🇸🇪</span>
-			<span>Sidan du försöker besöka verkar inte finnas… vill du <a href="/">gå hem</a>, i stället?</span>
-		</p>
-		<p lang="en">
-			<span aria-hidden="true">🇬🇧</span>
-			<span>The page you're trying to visit doesn't seem to exist… would you like to <a href="/en/">go home</a>, instead?</span>
-		</p>
-	</section>
-</main>
-</body>
+	{% include 'head' %}
+	<body class="page__error__body">
+		<main class="page__error stack" role="main">
+			<header>
+				<h1>404 &ndash; {{ pages.error.description | i18n }}</h1>
+			</header>
+			<section class="stack stack-text">
+				<p class="flow flow-text">
+					<span aria-hidden="true">🇸🇪</span>
+					<span>Sidan du försöker besöka verkar inte finnas… vill du <a href="/">gå hem</a>, i stället?</span>
+				</p>
+				<p class="flow flow-text" lang="en">
+					<span aria-hidden="true">🇬🇧</span>
+					<span
+						>The page you're trying to visit doesn't seem to exist… would you like to <a href="/en/">go home</a>,
+						instead?</span
+					>
+				</p>
+			</section>
+		</main>
+	</body>
 </html>
-

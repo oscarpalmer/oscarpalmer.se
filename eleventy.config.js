@@ -58,6 +58,7 @@ export default (config) => {
 	config.addFilter('markdown', filters.renderMarkdown);
 
 	config.addShortcode('getDescription', codes.getDescription);
+	config.addShortcode('getStyles', codes.getStyles);
 	config.addShortcode('getTitle', codes.getTitle);
 
 	config.addPassthroughCopy({

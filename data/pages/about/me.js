@@ -70,8 +70,8 @@ export default {
 			},
 			{
 				description: {
-					en: 'My favourite football club, which I have followed since the late 90s, when I got a David Beckham jersey; I have been stuck since then.',
-					sv: 'Min favoritklubb i fotboll, som jag följt sedan det sena 90-talet, då jag fick en David Beckham-tröja; jag har varit fast sedan dess.',
+					en: 'My favourite football club, which I have followed since the late 90s, when I got a David Beckham jersey; I have been obsessed since then. <i>Hated, adored, never ignored</i><span aria-hidden="true">&nbsp;👹</span>',
+					sv: 'Min favoritklubb i fotboll, som jag följt sedan det sena 90-talet, då jag fick en David Beckham-tröja; jag har varit besatt sedan dess. <i lang="en">Hated, adored, never ignored</i><span aria-hidden="true">&nbsp;👹</span>',
 				},
 				icon: 'ball-football',
 				id: 'manchester_united',

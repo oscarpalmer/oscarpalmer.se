@@ -10,14 +10,14 @@
 	</header>
 	<ul class="grid grid-large">
 		{% for project in pages.projects.work.items %}
-			<li class="stack stack-text">
+			<li class="stack-text">
 				<header>
 					<h3 class="flow flow-text">
 						{{ project.icon | icon -}}
 						{{- project.title | i18n }}
 					</h3>
 				</header>
-				<div class="stack stack-text">{{ project.description | markdown }}</div>
+				<div class="stack-text">{{ project.description | markdown }}</div>
 			</li>
 		{% endfor %}
 	</ul>
@@ -30,7 +30,7 @@
 	</header>
 	<ul class="grid grid-large">
 		{% for project in pages.projects.personal.items %}
-			<li class="stack stack-text">
+			<li class="stack-text">
 				<header>
 					<h3>
 						<a class="flow flow-text" href="{{ project.url }}" hreflang="en">
@@ -39,7 +39,7 @@
 						</a>
 					</h3>
 				</header>
-				<div class="stack stack-text">{{ project.description | markdown }}</div>
+				<div class="stack-text">{{ project.description | markdown }}</div>
 			</li>
 		{% endfor %}
 		<li class="page__projects__personal__suffix">

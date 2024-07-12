@@ -5,8 +5,8 @@
 		{% include 'banner' %}
 		<main class="content fill stack" id="content">
 			{% if title %}
-				<header class="header stack stack-text">
-					<h1>{{ title | i18n }}</h1>
+				<header class="header">
+					<h1 class="header__title">{{ title | i18n }}</h1>
 					{% if description %}
 						<p class="header__description">{{ description | i18n }}</p>
 					{% endif %}

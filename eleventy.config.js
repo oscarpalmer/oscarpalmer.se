@@ -1,9 +1,5 @@
-import sassPlugin from 'eleventy-plugin-dart-sass';
 import {minify as minifyHtml} from 'html-minifier';
-import * as path from 'node:path';
 import {codes, filters} from './11ty/index.js';
-
-const domain = 'https://oscarpalmer.se';
 
 const environment = {
 	production: (process.env.ELEVENTY_MODE || 'development') === 'production',
@@ -21,24 +17,12 @@ const options = {
 		decodeEntities: true,
 		removeComments: true,
 	},
-
-	sass: {
-		domainName: domain,
-		outDir: path.normalize(path.join(path.dirname('./'), './build')),
-		outFileName: 'styles',
-		outPath: '/assets/stylesheets/',
-		outputStyle: environment.production ? 'compressed' : 'expanded',
-		sassIndexFile: 'styles.scss',
-		sassLocation: path.normalize(
-			path.join(path.dirname('./'), './source/assets/stylesheets/'),
-		),
-	},
 };
 
 export default (config) => {
 	config.addGlobalData(
 		'canonicalUrl',
-		environment.production ? domain : 'http://localhost:4567',
+		environment.production ? 'https://oscarpalmer.se' : 'http://localhost:4567',
 	);
 
 	config.addGlobalData('production', environment.production);
@@ -68,7 +52,7 @@ export default (config) => {
 		'source/site.webmanifest': 'site.webmanifest',
 	});
 
-	config.addPlugin(sassPlugin, options.sass);
+	config.addWatchTarget('source/assets');
 
 	config.setServerOptions(options.browser);
 

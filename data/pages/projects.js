@@ -2,8 +2,8 @@ import {getMarkdown} from '../../11ty/index.js';
 
 export default {
 	description: {
-		en: `Projects and other cool things I've worked on, both at and outside of work.`,
-		sv: 'Projekt och andra coola saker jag har jobbat på, både på och utanför jobbet.',
+		en: `Thingamajigs and other cool things I've worked on, both at and outside of work.`,
+		sv: 'Mackapärer och andra coola saker jag har jobbat på, både inom och utanför jobbet.',
 	},
 	personal: {
 		description: {

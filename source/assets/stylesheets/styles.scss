@@ -3,6 +3,13 @@
 @use '../../../node_modules/@oscarpalmer/atoms/src/css/a11y.scss';
 @use './_variables.scss';
 @use './base.scss';
+@use './container/banner.scss';
+@use './container/footer.scss';
+@use './container/content.scss';
+@use './page/home.scss';
+@use './page/about.scss';
+@use './page/contact.scss';
+@use './page/projects.scss';
 
 * {
 	outline: 1px solid rgba(gold, 0.5);

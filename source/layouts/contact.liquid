@@ -7,7 +7,7 @@
 	<header class="visually-hidden">
 		<h2 id="intro_title">{{ pages.contact.intro.title | i18n }}</h2>
 	</header>
-	<div class="stack stack-text">{{ pages.contact.intro.content | markdown }}</div>
+	<div class="stack-text">{{ pages.contact.intro.content | markdown }}</div>
 </article>
 <article aria-labelledby="links_title">
 	<header class="visually-hidden">
@@ -22,10 +22,10 @@
 					{%- endif %}
 					{{ link.label | i18n -}}
 				</span>
-				<a href="{{ link.url }}">
-					<span>{{ link.value }}</span>
+				<a class="page__contact__links__anchor" href="{{ link.url }}">
+					<span class="page__contact__links__anchor__prefix">{{ link.value }}</span>
 					{% if link.suffix %}
-						<i>{{ link.suffix | i18n }}</i>
+						<i class="page__contact__links__suffix">{{ link.suffix | i18n }}</i>
 					{% endif %}
 				</a>
 			</li>

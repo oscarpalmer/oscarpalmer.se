@@ -1,23 +1,26 @@
 {
 	"name": "oscarpalmer.se",
 	"devDependencies": {
-		"@11ty/eleventy": "3.0.0-alpha.14",
+		"@11ty/eleventy": "3.0.0-alpha.16",
 		"@biomejs/biome": "^1.8.3",
-		"@oscarpalmer/atoms": "^0.55.0",
-		"@tabler/icons": "^3.9.0",
+		"@oscarpalmer/atoms": "^0.56.1",
+		"@tabler/icons": "^3.10.0",
 		"bun": "^1.1.18",
-		"eleventy-plugin-dart-sass": "^1.0.3",
+		"concurrently": "^8.2.2",
 		"html-minifier": "^4.0.0",
-		"markdown-it": "^14.1.0"
+		"markdown-it": "^14.1.0",
+		"sass": "^1.77.8"
 	},
 	"prettier": {
 		"useTabs": true
 	},
 	"private": true,
 	"scripts": {
-		"build": "ELEVENTY_MODE=production eleventy",
-		"serve": "ELEVENTY_MODE=development eleventy --quiet --serve"
+		"11ty": "eleventy --quiet --serve",
+		"build": "ELEVENTY_MODE=production rm -rf ./build && bun run css --style=compressed && eleventy",
+		"css": "bunx sass ./source/assets/stylesheets/styles.scss ./build/assets/stylesheets/styles.css",
+		"serve": "ELEVENTY_MODE=development rm -rf ./build && concurrently \"bun run css --watch\" \"bun run 11ty\""
 	},
 	"type": "module",
-	"version": "24.7.10"
+	"version": "24.7.12"
 }

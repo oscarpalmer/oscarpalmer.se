@@ -16,18 +16,20 @@
 	<ul class="page__contact__links">
 		{% for link in pages.contact.links.items %}
 			<li class="page__contact__links__item">
-				<span class="flow flow-text">
+				<h3 class="flow-text page__contact__links__label">
 					{% if link.icon %}
 						{{ link.icon | icon -}}
 					{%- endif %}
 					{{ link.label | i18n -}}
-				</span>
-				<a class="page__contact__links__anchor" href="{{ link.url }}">
-					<span class="page__contact__links__anchor__prefix">{{ link.value }}</span>
-					{% if link.suffix %}
-						<i class="page__contact__links__suffix">{{ link.suffix | i18n }}</i>
-					{% endif %}
-				</a>
+				</h3>
+				<p>
+					<a class="page__contact__links__anchor" href="{{ link.url }}">
+						<span class="page__contact__links__anchor__prefix">{{ link.value }}</span>
+						{% if link.suffix %}
+							<i class="page__contact__links__anchor__suffix">{{ link.suffix | i18n }}</i>
+						{% endif %}
+					</a>
+				</p>
 			</li>
 		{% endfor %}
 	</ul>

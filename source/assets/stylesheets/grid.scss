@@ -1,0 +1,45 @@
+.grid {
+	&-large,
+	&-small {
+		display: grid;
+		gap: var(--spacing);
+
+		@media (min-width: 40em) {
+			& {
+				width: calc(100% + 8rem + var(--spacing));
+				margin: 0 0 0 calc(-1 * (8rem + var(--spacing)));
+			}
+		}
+	}
+
+	&-large {
+		grid-template-columns: 1fr;
+	}
+
+	&-small {
+		grid-template-columns: 1fr;
+		font-size: .875rem;
+	}
+
+	@media (min-width: 24em) {
+		&-small {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (min-width: 40em) {
+		&-large {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&-small {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	@media (min-width: 60em) {
+		&-small {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+}

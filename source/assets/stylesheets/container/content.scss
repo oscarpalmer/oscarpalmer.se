@@ -1,0 +1,35 @@
+.content {
+	grid-area: content;
+	padding: var(--spacing);
+
+	@media (min-width: 40em) {
+		& {
+			padding: 1rem 0 0;
+			margin: var(--spacing) 0 0;
+		}
+	}
+}
+
+.header {
+	max-width: 40rem;
+	padding: 0 0 var(--spacing);
+	display: flex;
+	flex-flow: column;
+	gap: calc(var(--spacing) / 2);
+	border-bottom: 1px solid var(--border);
+
+	&__title,
+	&__description {
+		font-size: 1.5rem;
+		line-height: 1.25;
+	}
+
+	&__title {
+		color: var(--text-secondary);
+	}
+
+	&__description {
+		color: var(--text-subtle);
+		font-style: italic;
+	}
+}

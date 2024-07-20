@@ -1,0 +1,54 @@
+.banner {
+	grid-area: banner;
+	padding: 1rem;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--border);
+	line-height: 1rem;
+
+	&,
+	&__items {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 1rem;
+	}
+
+	@media (min-width: 40em) {
+		& {
+			margin: var(--spacing) 0 0;
+			background-color: #fff;
+			border-bottom-width: 0;
+			border-radius: 0.25rem;
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+				0 2px 4px 0 rgba(0, 0, 0, 0.05);
+			font-size: 0.875rem;
+			text-align: right;
+			position: sticky;
+			top: var(--spacing);
+		}
+
+		&,
+		&__items {
+			flex-flow: column;
+		}
+	}
+}
+
+.skipper {
+	padding: 1em;
+	background-color: white;
+	outline: none;
+	border: 2px solid var(--color-green);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+		0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+	font-size: 1.5rem;
+	line-height: 1;
+	text-align: center;
+	inset: var(--spacing) var(--spacing) auto;
+	z-index: 100;
+
+	@media (min-width: 40em) {
+		& {
+			inset: var(--spacing) auto auto var(--spacing);
+		}
+	}
+}

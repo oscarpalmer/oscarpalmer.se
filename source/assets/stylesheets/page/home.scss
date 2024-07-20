@@ -1,0 +1,14 @@
+.page__home {
+	.banner {
+		@media (min-width: 40em) and (min-height: 32em) {
+			& {
+				top: 50%;
+				transform: translate3d(0, -50%, 0);
+			}
+		}
+	}
+
+	.content {
+		justify-content: center;
+	}
+}

@@ -1,1 +1,15 @@
-:root {}
+:root {
+	--spacing: clamp(1rem, 3vw, 3rem);
+	--flow-gap: var(--spacing);
+	--stack-gap: var(--spacing);
+
+	--background: #f8f6f4;
+	--border: #dfdad0;
+
+	--color-blue: #2f6ad0;
+	--color-green: #3f9a50;
+
+	--text-primary: #2f2a20;
+	--text-secondary: #6f6a60;
+	--text-subtle: #8f8a80;
+}

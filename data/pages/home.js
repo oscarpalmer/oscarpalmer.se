@@ -8,12 +8,8 @@ export default {
 		},
 		intro: {
 			main: {
-				en: "Howdy, I'm Oscar",
-				sv: 'Hallå, jag heter Oscar',
-			},
-			suffix: {
-				en: '&nbsp;and&hellip;',
-				sv: '&nbsp;och&hellip;',
+				en: "Hiya, I'm Oscar",
+				sv: 'Tjena, jag heter Oscar',
 			},
 		},
 	},

@@ -1,0 +1,15 @@
+.page__projects {
+	&__personal {
+		&__suffix {
+			align-self: flex-end;
+			color: var(--text-secondary);
+			font-style: italic;
+
+			@media (min-width: 60em) {
+				& {
+					text-align: right;
+				}
+			}
+		}
+	}
+}

@@ -2,7 +2,7 @@ import {minify as minifyHtml} from 'html-minifier';
 import {codes, filters} from './11ty/index.js';
 
 const environment = {
-	production: (process.env.ELEVENTY_MODE || 'development') === 'production',
+	production: (process.env.ELEVENTY_RUN_MODE || 'development') === 'build',
 };
 
 const now = new Date();
@@ -42,7 +42,6 @@ export default (config) => {
 	config.addFilter('markdown', filters.renderMarkdown);
 
 	config.addShortcode('getDescription', codes.getDescription);
-	config.addShortcode('getStyles', codes.getStyles);
 	config.addShortcode('getTitle', codes.getTitle);
 
 	config.addPassthroughCopy({
@@ -52,7 +51,7 @@ export default (config) => {
 		'source/site.webmanifest': 'site.webmanifest',
 	});
 
-	config.addWatchTarget('source/assets');
+	config.addWatchTarget('source');
 
 	config.setServerOptions(options.browser);
 

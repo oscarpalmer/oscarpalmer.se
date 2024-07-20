@@ -12,7 +12,7 @@
 		{% for project in pages.projects.work.items %}
 			<li class="stack-text">
 				<header>
-					<h3 class="flow flow-text">
+					<h3 class="flow-text">
 						{{ project.icon | icon -}}
 						{{- project.title | i18n }}
 					</h3>
@@ -28,12 +28,12 @@
 		<h2 id="personal_title">{{ pages.projects.personal.title | i18n }}</h2>
 		<p>{{ pages.projects.personal.description | i18n }}</p>
 	</header>
-	<ul class="grid grid-large">
+	<ul class="grid grid-small">
 		{% for project in pages.projects.personal.items %}
 			<li class="stack-text">
 				<header>
 					<h3>
-						<a class="flow flow-text" href="{{ project.url }}" hreflang="en">
+						<a class="flow-text" href="{{ project.url }}" hreflang="en">
 							{{- project.icon | icon -}}
 							{{- project.title -}}
 						</a>

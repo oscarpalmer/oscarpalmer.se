@@ -44,12 +44,12 @@
 		<h2 id="favourites_title">{{ pages.about.me.favourites.title | i18n }}</h2>
 		<p>{{ pages.about.me.favourites.description | i18n }}</p>
 	</header>
-	<ul class="flow grid grid-small">
+	<ul class="grid grid-small">
 		{% for favourite in pages.about.me.favourites.items %}
-			<li class="stack-text">
+			<li class="page__about__favourite stack-text">
 				<a
 					aria-describedby="{{ favourite.id }}"
-					class="flow flow-text"
+					class="flow-text page__about__favourite__anchor"
 					href="{{ favourite.url }}"
 				>
 					{% if favourite.icon %}
@@ -57,7 +57,7 @@
 					{%- endif %}
 					<span>{{ favourite.title | i18n }}</span>
 				</a>
-				<p id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
+				<p class="page__about__favourite__description" id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
 			</li>
 		{% endfor %}
 	</ul>

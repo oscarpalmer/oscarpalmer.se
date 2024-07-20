@@ -16,8 +16,8 @@
 	},
 	"private": true,
 	"scripts": {
-		"build": "rm -rf ./build && bun run css --style=compressed && eleventy",
-		"css": "bunx sass ./source/assets/stylesheets/styles.scss ./build/assets/stylesheets/styles.css --quiet",
+		"build": "rm -rf ./build && npm run css --style=compressed && eleventy",
+		"css": "sass ./source/assets/stylesheets/styles.scss ./build/assets/stylesheets/styles.css --quiet",
 		"serve": "rm -rf ./build && concurrently \"bun run css --watch\" \"eleventy --quiet --serve\""
 	},
 	"type": "module",

@@ -2,7 +2,7 @@
 	grid-area: banner;
 	padding: 1rem;
 	justify-content: space-between;
-	background-color: white;
+	background-color: var(--background-absolute);
 	border-bottom: 1px solid var(--border);
 	line-height: 1rem;
 	position: relative;
@@ -14,6 +14,10 @@
 		display: flex;
 		flex-flow: row wrap;
 		gap: 1rem;
+	}
+
+	a {
+		text-shadow: none;
 	}
 
 	@media (min-width: 24em) {
@@ -41,7 +45,7 @@
 
 .skipper {
 	padding: 1em;
-	background-color: white;
+	background-color: var(--background-absolute);
 	outline: none;
 	border: 2px solid var(--color-green);
 	font-size: 1.5rem;

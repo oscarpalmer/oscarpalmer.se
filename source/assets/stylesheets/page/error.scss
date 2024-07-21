@@ -1,8 +1,11 @@
 .page__error {
 	& {
+		--drop-shadow-colour: var(--border);
+		--drop-shadow-size: 2px;
+
 		grid-area: error;
-		filter: drop-shadow(0 1px 4px var(--border));
-		background: white;
+		filter: drop-shadow(0 1px var(--drop-shadow-size) var(--drop-shadow-colour));
+		background: var(--background-absolute);
 		border-radius: clamp(0.5rem, 1vw, 1rem);
 	}
 
@@ -21,7 +24,7 @@
 		width: var(--size);
 		height: var(--size);
 		align-self: center;
-		background-color: white;
+		background-color: var(--background-absolute);
 		border-radius: var(--size);
 		line-height: var(--size);
 		text-align: center;
@@ -78,5 +81,12 @@
 	p {
 		grid-area: message;
 		max-width: 24rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		& {
+			--drop-shadow-colour: rgba(0, 0, 0, 0.5);
+			--drop-shadow-size: 4px;
+		}
 	}
 }

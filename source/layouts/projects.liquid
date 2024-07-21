@@ -12,7 +12,7 @@
 		{% for project in pages.projects.work.items %}
 			<li class="stack-text">
 				<header>
-					<h3 class="flow-text">
+					<h3 class="flow-text page__projects__item__label">
 						{{ project.icon | icon -}}
 						{{- project.title | i18n }}
 					</h3>
@@ -32,8 +32,8 @@
 		{% for project in pages.projects.personal.items %}
 			<li class="stack-text">
 				<header>
-					<h3>
-						<a class="flow-text" href="{{ project.url }}" hreflang="en">
+					<h3 class="page__projects__item__label">
+						<a class="flow-text page__projects__item__anchor" href="{{ project.url }}" hreflang="en">
 							{{- project.icon | icon -}}
 							{{- project.title -}}
 						</a>

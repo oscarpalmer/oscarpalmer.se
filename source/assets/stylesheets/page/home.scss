@@ -11,4 +11,9 @@
 	.content {
 		justify-content: center;
 	}
+
+	&__intro,
+	&__blurb {
+		font-size: clamp(1.5rem, 3vw, 3rem);
+	}
 }

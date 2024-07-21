@@ -1,4 +1,14 @@
 .page__projects {
+	&__item {
+		&__label {
+			display: inline-flex;
+		}
+
+		&__anchor {
+			padding: 0 .5em 0 0;
+		}
+	}
+
 	&__personal {
 		&__suffix {
 			align-self: flex-end;

@@ -24,12 +24,17 @@ body {
 /** */
 
 a {
+	--text-shadow: var(--color-blue-rgb);
+
 	outline: 2px solid transparent;
 	outline-offset: 0.5em;
 	border-radius: 1em;
 	color: var(--color-blue);
+	transition: .125s ease-in-out;
 
 	&:focus {
+		--text-shadow: var(--color-green-rgb);
+
 		color: var(--color-green);
 	}
 
@@ -40,7 +45,15 @@ a {
 
 	@media (hover: hover) {
 		&:hover {
+			--text-shadow: var(--color-green-rgb);
+
 			color: var(--color-green);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		& {
+			text-shadow: 0 0 1em rgba(var(--text-shadow), .5);
 		}
 	}
 
@@ -87,17 +100,22 @@ hr {
 	border-color: var(--border);
 }
 
+svg {
+	stroke-width: 1;
+}
+
 /** */
 
 .shadow {
 	&-item {
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.05),
-			0 0 1rem 1rem var(--background);
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, var(--opacity)),
+			0 2px 4px 0 rgba(0, 0, 0, var(--opacity)), 0 0 1rem 1rem var(--background);
 	}
 
 	&-overlay {
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05),
-			0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 4px 8px 0 rgba(0, 0, 0, 0.05),
-			0 0 1rem 1rem var(--background);
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, var(--opacity)),
+			0 1px 2px 0 rgba(0, 0, 0, var(--opacity)),
+			0 2px 4px 0 rgba(0, 0, 0, var(--opacity)),
+			0 4px 8px 0 rgba(0, 0, 0, var(--opacity)), 0 0 1rem 1rem var(--background);
 	}
 }

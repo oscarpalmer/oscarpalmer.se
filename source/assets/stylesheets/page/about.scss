@@ -4,7 +4,7 @@
 		display: inline-flex;
 		flex-flow: row nowrap;
 		gap: 1em;
-		background-color: white;
+		background-color: var(--background-absolute);
 		border-radius: 0.5rem;
 		font-size: 0.875rem;
 
@@ -52,6 +52,7 @@
 		position: relative;
 
 		&__anchor {
+			padding: 0 .5em 0 0;
 			align-self: flex-start;
 		}
 
@@ -69,7 +70,7 @@
 			&__description {
 				padding: 1em;
 				display: none;
-				background-color: white;
+				background-color: var(--background-absolute);
 				border-radius: 0.5rem;
 				position: absolute;
 				inset: 0 auto auto 0;

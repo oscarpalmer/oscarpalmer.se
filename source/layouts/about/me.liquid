@@ -4,7 +4,7 @@
 {% layout 'page' %}
 {% block content %}
 <aside class="page__about__selfie__wrapper">
-	<figure class="page__about__selfie">
+	<figure class="page__about__selfie shadow-item">
 		<img
 			alt="{{ pages.about.me.photo.alt | i18n }}"
 			class="page__about__selfie__image"
@@ -57,7 +57,7 @@
 					{%- endif %}
 					<span>{{ favourite.title | i18n }}</span>
 				</a>
-				<p class="page__about__favourite__description" id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
+				<p class="page__about__favourite__description shadow-overlay" id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
 			</li>
 		{% endfor %}
 	</ul>

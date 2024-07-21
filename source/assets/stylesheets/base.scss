@@ -12,8 +12,10 @@ body {
 
 	@media (min-width: 40em) {
 		& {
-			grid-template-areas: '. banner content .' '. . content .' 'footer footer footer footer';
-			grid-template-columns: 1fr 8rem minmax(20rem, calc(48rem + var(--spacing))) 1fr;
+			grid-template-areas: ". banner content ." ". . content ." "footer footer footer footer";
+			grid-template-columns:
+				1fr 8rem minmax(20rem, calc(48rem + var(--spacing)))
+				1fr;
 			gap: var(--spacing);
 		}
 	}
@@ -23,7 +25,7 @@ body {
 
 a {
 	outline: 2px solid transparent;
-	outline-offset: .5em;
+	outline-offset: 0.5em;
 	border-radius: 1em;
 	color: var(--color-blue);
 
@@ -83,4 +85,19 @@ h3 {
 
 hr {
 	border-color: var(--border);
+}
+
+/** */
+
+.shadow {
+	&-item {
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.05),
+			0 0 1rem 1rem var(--background);
+	}
+
+	&-overlay {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+			0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 4px 8px 0 rgba(0, 0, 0, 0.05),
+			0 0 1rem 1rem var(--background);
+	}
 }

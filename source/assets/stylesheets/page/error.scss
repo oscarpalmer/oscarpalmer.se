@@ -26,11 +26,11 @@
 		line-height: var(--size);
 		text-align: center;
 
-		@media (min-width: 40rem) {
+		@media (min-width: 40em) {
 			& {
 				--size: 3rem;
 
-				margin: 0 calc((-1 * var(--spacing)) - (.5 * var(--size)));
+				margin: 0 calc((-1 * var(--spacing)) - (0.5 * var(--size)));
 			}
 		}
 	}
@@ -55,7 +55,7 @@
 		}
 
 		&:last-of-type {
-			font-size: .875rem;
+			font-size: 0.875rem;
 			font-style: italic;
 
 			h1,
@@ -64,7 +64,7 @@
 			}
 		}
 
-		@media (min-width: 40rem) {
+		@media (min-width: 40em) {
 			& {
 				column-gap: 0;
 			}

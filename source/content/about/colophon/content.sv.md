@@ -1,8 +1,8 @@
-Vad kul att du tycker detta är intressat, för det gör ju jag också såklart! <span aria-hidden="true">😊</span>
+Vad kul att du tycker detta är intressant, för det gör ju jag också såklart! <span aria-hidden="true">😊</span>
 
 Innehållet på denna sida är för det mesta skriven i {{markdown}}, medan jag skriver sidmallar med hjälp av {{liquid}}.
 
-Stilmallarna skrivs i {{sass}}, men "vanlig <i>CSS</i>" har kommit en lång väg sedan jag började med webbutveckling och jag kan nog lämna <i>Sass</i> snart.
+Stilmallarna skrivs i {{sass}}, men &ldquo;vanlig <i>CSS</i>&rdquo; har kommit en lång väg sedan jag började med webbutveckling och jag kan nog lämna <i>Sass</i> snart.
 
 De ikoner som används på sidan är antingen pålitliga emojis eller hämtade från {{tabler}}.
 

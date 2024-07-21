@@ -1,4 +1,4 @@
-I grew up in [Ulricehamn](https://ulricehamn.se), a nice little town by a lake with a lot of opportunities for sports, but I was always more interested in tech-related things – like computers and video games – since my early teen years, which has only continued into "adulthood".
+I grew up in [Ulricehamn](https://ulricehamn.se), a nice little town by a lake with a lot of opportunities for sports, but I was always more interested in tech-related things – like computers and video games – since my early teen years, which has only continued into &ldquo;adulthood&rdquo;.
 
 At 16, I started designing small icons and docks <i>(for macOS)</i>, as well as developing small websites for myself. The forum <i>MacThemes</i> was then a big inspiration and interest portal for me, and I see it as a springboard for my interests in design and development, as well as a great place to meet new, cool friends.
 

@@ -85,6 +85,10 @@ h2 {
 h2,
 h3 {
 	color: var(--text-secondary);
+
+	svg {
+		stroke-width: 2;
+	}
 }
 
 h2 {

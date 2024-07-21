@@ -2,7 +2,7 @@ How nice that you find this interesting, because I do too, of course! <span aria
 
 The content on this page is mostly written in {{markdown}}, while I write page templates using {{liquid}}.
 
-The stylesheets are written in {{sass}}, but "regular <i>CSS</i>" has come a long way since I started with web development, and I might be able to leave <i>Sass</i> soon.
+The stylesheets are written in {{sass}}, but &ldquo;regular <i>CSS</i>&rdquo; has come a long way since I started with web development, and I might be able to leave <i>Sass</i> soon.
 
 The icons used on the page are either reliable emojis or fetched from {{tabler}}.
 

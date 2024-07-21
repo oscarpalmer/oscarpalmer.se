@@ -1,4 +1,4 @@
-Jag är uppvuxen i [Ulricehamn](https://ulricehamn.se), en fin liten stad vid en sjö där det finns mycket sportmöjligheter, men jag har sedan unga tonåren varit mer intresserad av teknikrelaterade saker – som datorer och tv-spel – vilket bara har fortsatt in i "vuxen" ålder.
+Jag är uppvuxen i [Ulricehamn](https://ulricehamn.se), en fin liten stad vid en sjö där det finns mycket sportmöjligheter, men jag har sedan unga tonåren varit mer intresserad av teknikrelaterade saker – som datorer och tv-spel – vilket bara har fortsatt in i &ldquo;vuxen&rdquo; ålder.
 
 Som 16-åring började jag designa små ikoner och dockor <i>(för macOS)</i>, samt utveckla små webbsidor för mig själv. Forumet <i>MacThemes</i> var då en stor inspirationskälla och intresseportal för mig, och jag ser det som en språngbräda för mina intressen inom design och utveckling, samt en bra plats att träffa nya, coola vänner.
 

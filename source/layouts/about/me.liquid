@@ -57,7 +57,9 @@
 					{%- endif %}
 					<span>{{ favourite.title | i18n }}</span>
 				</a>
-				<p class="page__about__favourite__description shadow-overlay" id="{{ favourite.id }}">{{ favourite.description | i18n }}</p>
+				<p class="page__about__favourite__description shadow-overlay" id="{{ favourite.id }}">
+					{{ favourite.description | i18n }}
+				</p>
 			</li>
 		{% endfor %}
 	</ul>

@@ -20,16 +20,20 @@
 
 	&__title,
 	&__description {
-		font-size: 1.5rem;
 		line-height: 1.25;
 	}
 
 	&__title {
 		color: var(--text-secondary);
+		font-size: 0.75rem;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
 	}
 
 	&__description {
 		color: var(--text-subtle);
+		font-size: 1.5rem;
 		font-style: italic;
 	}
 }

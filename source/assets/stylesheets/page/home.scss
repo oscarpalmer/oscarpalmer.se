@@ -16,4 +16,10 @@
 	&__blurb {
 		font-size: clamp(1.5rem, 3vw, 3rem);
 	}
+
+	&__intro {
+		font-weight: normal;
+		letter-spacing: normal;
+		text-transform: none;
+	}
 }

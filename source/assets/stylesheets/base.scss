@@ -24,36 +24,56 @@ body {
 /** */
 
 a {
-	--text-shadow: var(--color-blue-rgb);
+	--anchor-background: transparent;
+	--anchor-color: var(--color-blue);
+	--anchor-shadow: var(--color-blue-rgb);
 
 	outline: 2px solid transparent;
 	outline-offset: 0.5em;
+	box-shadow: 0 0 0 0.5em var(--anchor-background),
+		inset 0 0 0 100vw var(--anchor-background);
 	border-radius: 1em;
-	color: var(--color-blue);
-	transition: .125s ease-in-out;
+	color: var(--anchor-color);
+	transition: 0.125s ease-in-out;
+
+	&:visited {
+		--anchor-color: var(--color-purple);
+		--anchor-shadow: var(--color-purple-rgb);
+	}
 
 	&:focus {
-		--text-shadow: var(--color-green-rgb);
+		--anchor-background: white;
+		--anchor-color: var(--color-green);
+		--anchor-shadow: var(--color-green-rgb);
 
-		color: var(--color-green);
+		position: relative;
+		z-index: 1;
 	}
 
 	&:focus-visible {
-		outline-color: var(--color-green);
+		outline-color: currentColor;
 		text-decoration: none;
 	}
 
 	@media (hover: hover) {
 		&:hover {
-			--text-shadow: var(--color-green-rgb);
-
-			color: var(--color-green);
+			--anchor-color: var(--color-green);
+			--anchor-shadow: var(--color-green-rgb);
 		}
+	}
+
+	&:active {
+		--anchor-color: var(--text-secondary);
+		--anchor-shadow: 0, 0, 0;
 	}
 
 	@media (prefers-color-scheme: dark) {
 		& {
-			text-shadow: 0 0 1em rgba(var(--text-shadow), .5);
+			text-shadow: 0 0 1em rgba(var(--anchor-shadow), 0.5);
+
+			&:focus {
+				--anchor-background: var(--background-absolute);
+			}
 		}
 	}
 
@@ -112,14 +132,18 @@ svg {
 
 .shadow {
 	&-item {
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, var(--opacity)),
-			0 2px 4px 0 rgba(0, 0, 0, var(--opacity)), 0 0 1rem 1rem var(--background);
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, var(--opacity)),
+			0 1px 2px 0 rgba(0, 0, 0, var(--opacity)),
+			0 2px 4px 0 rgba(0, 0, 0, var(--opacity)),
+			0 4px 8px 0 rgba(0, 0, 0, var(--opacity)), 0 0 1rem 1rem var(--background);
 	}
 
 	&-overlay {
 		box-shadow: 0 0 0 1px rgba(0, 0, 0, var(--opacity)),
 			0 1px 2px 0 rgba(0, 0, 0, var(--opacity)),
 			0 2px 4px 0 rgba(0, 0, 0, var(--opacity)),
-			0 4px 8px 0 rgba(0, 0, 0, var(--opacity)), 0 0 1rem 1rem var(--background);
+			0 4px 8px 0 rgba(0, 0, 0, var(--opacity)),
+			0 8px 16px 0 rgba(0, 0, 0, calc(0.5 * var(--opacity))),
+			0 0 1rem 1rem var(--background);
 	}
 }

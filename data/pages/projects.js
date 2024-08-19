@@ -13,6 +13,15 @@ export default {
 		items: [
 			{
 				description: {
+					en: 'A framework for creating web components using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">&ldquo;template literals&rdquo;</a>.',
+					sv: 'Ett ramverk för att skapa webbkomponenter med hjälp av <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" hreflang="en" lang="en">&ldquo;template literals&rdquo;</a>.',
+				},
+				icon: 'hammer',
+				title: 'Abydon',
+				url: 'https://github.com/oscarpalmer/abydon',
+			},
+			{
+				description: {
 					en: 'Atomic helpers to help with writing <i>CSS</i> and <i>JavaScript</i>.',
 					sv: 'Atomär hjälpfunktionalitet för att underlätta skrivandet av <i>CSS</i> och <i>JavaScript</i>.',
 				},
@@ -28,6 +37,15 @@ export default {
 				icon: 'components',
 				title: 'Components',
 				url: 'https://github.com/oscarpalmer/components',
+			},
+			{
+				description: {
+					en: 'A <i>Stimulus</i>-like framework for developing web components with an attribute-based syntax.',
+					sv: 'Ett <i>Stimulus</i>-liknande ramverk för att utveckla webbkomponenter med en attributbaserad syntax.',
+				},
+				icon: 'wand',
+				title: 'Magnus',
+				url: 'https://github.com/oscarpalmer/magnus',
 			},
 			{
 				description: {

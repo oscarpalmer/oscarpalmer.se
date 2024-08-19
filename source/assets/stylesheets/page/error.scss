@@ -4,7 +4,9 @@
 		--drop-shadow-size: 2px;
 
 		grid-area: error;
-		filter: drop-shadow(0 1px var(--drop-shadow-size) var(--drop-shadow-colour));
+		filter: drop-shadow(
+			0 1px var(--drop-shadow-size) var(--drop-shadow-colour)
+		);
 		background: var(--background-absolute);
 		border-radius: clamp(0.5rem, 1vw, 1rem);
 	}

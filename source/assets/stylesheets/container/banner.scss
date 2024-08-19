@@ -52,7 +52,7 @@
 	line-height: 1;
 	text-align: center;
 	inset: var(--spacing) var(--spacing) auto;
-	z-index: 100;
+	z-index: 1000 !important;
 
 	@media (min-width: 40em) {
 		& {

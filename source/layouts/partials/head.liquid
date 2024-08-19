@@ -1,10 +1,8 @@
 <head>
 	<base href="/">
 
-	<meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>{% getTitle %}</title>
 
@@ -41,7 +39,9 @@
 	<meta name="color-scheme" content="light">
 	<meta name="generator" content="Eleventy v{{ version }}">
 	<meta name="supported-color-schemes" content="light">
-	<meta name="theme-color" content="#f8f6f4">
+
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f6f4">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#242428">
 
 	{% if error %}
 		<meta name="robots" content="noindex, nofollow">

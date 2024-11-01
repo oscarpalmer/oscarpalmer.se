@@ -1,25 +1,22 @@
 {
 	"name": "oscarpalmer.se",
 	"devDependencies": {
-		"@11ty/eleventy": "3.0.0-alpha.17",
-		"@biomejs/biome": "^1.8.3",
-		"@oscarpalmer/atoms": "^0.60.0",
-		"@tabler/icons": "^3.11.0",
-		"bun": "^1.1.20",
-		"concurrently": "^8.2.2",
-		"html-minifier": "^4.0.0",
-		"markdown-it": "^14.1.0",
-		"sass": "^1.77.8"
-	},
-	"prettier": {
-		"useTabs": true
+		"@11ty/eleventy": "^3",
+		"@biomejs/biome": "^1.9",
+		"@oscarpalmer/atoms": "^0.77",
+		"@oscarpalmer/oui": "^0.1",
+		"@tabler/icons": "^3.21",
+		"concurrently": "^9",
+		"html-minifier": "^4",
+		"markdown-it": "^14.1",
+		"sass": "^1.80"
 	},
 	"private": true,
 	"scripts": {
 		"build": "rm -rf ./build && npm run css --style=compressed && eleventy",
 		"css": "sass ./source/assets/stylesheets/styles.scss ./build/assets/stylesheets/styles.css --quiet",
-		"serve": "rm -rf ./build && concurrently \"bun run css --watch\" \"eleventy --quiet --serve\""
+		"serve": "rm -rf ./build && concurrently \"npm run css --watch\" \"eleventy --quiet --serve\""
 	},
 	"type": "module",
-	"version": "24.8.19"
+	"version": "24.11.1"
 }

@@ -8,7 +8,7 @@ De ikoner som används på sidan är antingen pålitliga emojis eller hämtade f
 
 Jag skriver och utvecklar allt i {{nova}} <i>(eller {{vscode}})</i> och testar det <i>(primärt)</i> i {{polypane}}, allt på [en iMac](https://www.apple.com/se/imac/).
 
-För att baka ihop alla källfiler så använder jag {{eleventy}} – vilket är en bra och utbyggbar generator för statiska webbplatser – tillsammans med {{bun}} som byggverktyg.
+För att baka ihop alla källfiler så använder jag {{eleventy}} – vilket är en bra och utbyggbar generator för statiska webbplatser – tillsammans med {{node}} som byggverktyg.
 
 Sidan hostas på {{cloudflare}}, men jag har tidigare använt {{digitalocean}}… och jag är säkert tillbaka där igen snart. Domännamnet är köpt hos {{iwantmyname}}.
 

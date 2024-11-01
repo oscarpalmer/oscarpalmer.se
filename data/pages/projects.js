@@ -22,21 +22,12 @@ export default {
 			},
 			{
 				description: {
-					en: 'Atomic helpers to help with writing <i>CSS</i> and <i>JavaScript</i>.',
-					sv: 'Atomär hjälpfunktionalitet för att underlätta skrivandet av <i>CSS</i> och <i>JavaScript</i>.',
+					en: 'Atomic helpers to assist with all kinds of <i>JavaScript</i>-stuff.',
+					sv: 'Atomär hjälpfunktionalitet för att assistera alla möjliga sorters <i>JavaScript</i>-saker.',
 				},
 				icon: 'atom',
 				title: 'Atoms',
 				url: 'https://github.com/oscarpalmer/atoms',
-			},
-			{
-				description: {
-					en: 'A collection of reusable components for developing modern and functional web applications.',
-					sv: 'En samling av återanvändbara komponenter för att utveckla av moderna och funktionella webbapplikationer.',
-				},
-				icon: 'components',
-				title: 'Components',
-				url: 'https://github.com/oscarpalmer/components',
 			},
 			{
 				description: {
@@ -46,6 +37,15 @@ export default {
 				icon: 'wand',
 				title: 'Magnus',
 				url: 'https://github.com/oscarpalmer/magnus',
+			},
+			{
+				description: {
+					en: 'A collection of styles, components, and utilities for building websites and applications.',
+					sv: 'En samling av stilar, komponenter, och verktyg för att bygga webbsidor och applikationer.',
+				},
+				icon: 'baguette',
+				title: 'Oui',
+				url: 'https://github.com/oscarpalmer/oui',
 			},
 			{
 				description: {

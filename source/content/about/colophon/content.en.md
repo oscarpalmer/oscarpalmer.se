@@ -8,7 +8,7 @@ The icons used on the page are either reliable emojis or fetched from {{tabler}}
 
 I write and develop everything in {{nova}} <i>(or {{vscode}})</i> and test it <i>(primarily)</i> in {{polypane}}, all on [an iMac](https://www.apple.com/imac/).
 
-To bundle all the source files together, I use {{eleventy}} – which is a great and extensible static site generator – together with {{bun}} as a build tool.
+To bundle all the source files together, I use {{eleventy}} – which is a great and extensible static site generator – together with {{node}} as a build tool.
 
 The site is hosted on {{cloudflare}}, but I have previously used {{digitalocean}}… and I'm sure I'll be back there soon. The domain name is provided via {{iwantmyname}}.
 

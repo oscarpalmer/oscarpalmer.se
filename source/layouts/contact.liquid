@@ -7,7 +7,7 @@
 	<header class="visually-hidden">
 		<h2 id="intro_title">{{ pages.contact.intro.title | i18n }}</h2>
 	</header>
-	<div class="stack-text">{{ pages.contact.intro.content | markdown }}</div>
+	<div class="stack stack-text">{{ pages.contact.intro.content | markdown }}</div>
 </article>
 <article aria-labelledby="links_title">
 	<header class="visually-hidden">
@@ -16,7 +16,7 @@
 	<ul class="page__contact__links">
 		{% for link in pages.contact.links.items %}
 			<li class="page__contact__links__item">
-				<h3 class="flow-text page__contact__links__label">
+				<h3 class="flow flow-text page__contact__links__label">
 					{% if link.icon %}
 						{{ link.icon | icon -}}
 					{%- endif %}

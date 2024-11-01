@@ -17,6 +17,9 @@
 	}
 
 	&-small {
+		--flow-gap-text: .5em;
+		--stack-gap-text: .5em;
+
 		grid-template-columns: 1fr;
 		font-size: 0.875rem;
 	}

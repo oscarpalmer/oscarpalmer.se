@@ -7,10 +7,6 @@ export default {
 		sv: 'En översikt över allt som byggde och driver denna lilla webbplats.',
 	},
 	links: {
-		bun: {
-			title: 'Bun',
-			url: 'https://bun.sh/',
-		},
 		cloudflare: {
 			title: 'Cloudflare',
 			url: 'https://www.cloudflare.com/',
@@ -35,9 +31,13 @@ export default {
 			title: 'Markdown',
 			url: 'https://daringfireball.net/projects/markdown/',
 		},
+		node: {
+			title: 'Node',
+			url: 'https://nodejs.org/',
+		},
 		nova: {
 			title: 'Nova',
-			url: 'https://nova.app',
+			url: 'https://nova.app/',
 		},
 		polypane: {
 			title: 'Polypane',
@@ -49,7 +49,7 @@ export default {
 		},
 		tabler: {
 			title: 'Tabler',
-			url: 'https://tabler.io/icons',
+			url: 'https://tabler.io/icons/',
 		},
 		vscode: {
 			title: 'Visual Studio Code',

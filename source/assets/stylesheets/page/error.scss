@@ -4,9 +4,7 @@
 		--drop-shadow-size: 2px;
 
 		grid-area: error;
-		filter: drop-shadow(
-			0 1px var(--drop-shadow-size) var(--drop-shadow-colour)
-		);
+		filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.125));
 		background: var(--background-absolute);
 		border-radius: clamp(0.5rem, 1vw, 1rem);
 	}
@@ -31,7 +29,7 @@
 		line-height: var(--size);
 		text-align: center;
 
-		@media (min-width: 40em) {
+		@media (min-width: 48em) {
 			& {
 				--size: 3rem;
 
@@ -69,7 +67,7 @@
 			}
 		}
 
-		@media (min-width: 40em) {
+		@media (min-width: 48em) {
 			& {
 				column-gap: 0;
 			}
@@ -87,8 +85,7 @@
 
 	@media (prefers-color-scheme: dark) {
 		& {
-			--drop-shadow-colour: rgba(0, 0, 0, 0.5);
-			--drop-shadow-size: 4px;
+			filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.5));
 		}
 	}
 }

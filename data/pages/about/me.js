@@ -50,8 +50,8 @@ export default {
 			},
 			{
 				description: {
-					en: 'My second favourite football club, which I have followed since 2004, when Henrik Larsson started playing for them. <i lang="ca">Més que un club</i><span aria-hidden="true">&nbsp;💕</span>',
-					sv: 'Min andra favoritklubb i fotboll, som jag följt sedan 2004, då Henrik Larsson började spela för dem. <i lang="ca">Més que un club</i><span aria-hidden="true">&nbsp;💕</span>',
+					en: 'My second favourite football club, which I have followed since 2004, when Henrik Larsson started playing for them. <i lang="ca">Més que un club</i><span class="emoji" aria-hidden="true">&nbsp;💕</span>',
+					sv: 'Min andra favoritklubb i fotboll, som jag följt sedan 2004, då Henrik Larsson började spela för dem. <i lang="ca">Més que un club</i><span class="emoji" aria-hidden="true">&nbsp;💕</span>',
 				},
 				icon: 'ball-football',
 				id: 'fc_barcelona',
@@ -70,8 +70,8 @@ export default {
 			},
 			{
 				description: {
-					en: 'My favourite football club, which I have followed since the late 90s, when I got a David Beckham jersey; I have been obsessed since then. <i>Hated, adored, never ignored</i><span aria-hidden="true">&nbsp;👹</span>',
-					sv: 'Min favoritklubb i fotboll, som jag följt sedan det sena 90-talet, då jag fick en David Beckham-tröja; jag har varit besatt sedan dess. <i lang="en">Hated, adored, never ignored</i><span aria-hidden="true">&nbsp;👹</span>',
+					en: 'My favourite football club, which I have followed since the late 90s, when I got a David Beckham jersey; I have been obsessed since then. <i>Hated, adored, never ignored</i><span class="emoji" aria-hidden="true">&nbsp;👹</span>',
+					sv: 'Min favoritklubb i fotboll, som jag följt sedan det sena 90-talet, då jag fick en David Beckham-tröja; jag har varit besatt sedan dess. <i lang="en">Hated, adored, never ignored</i><span class="emoji" aria-hidden="true">&nbsp;👹</span>',
 				},
 				icon: 'ball-football',
 				id: 'manchester_united',

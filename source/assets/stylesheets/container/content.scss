@@ -2,7 +2,7 @@
 	grid-area: content;
 	padding: var(--spacing);
 
-	@media (min-width: 40em) {
+	@media (min-width: 48em) {
 		& {
 			padding: 1rem 0 0;
 			margin: var(--spacing) 0 0;
@@ -11,7 +11,7 @@
 }
 
 .header {
-	max-width: 40rem;
+	max-width: 48rem;
 	padding: 0 0 var(--spacing);
 	display: flex;
 	flex-flow: column;
@@ -20,6 +20,7 @@
 
 	&__title,
 	&__description {
+		font-weight: normal;
 		line-height: 1.25;
 	}
 
@@ -33,7 +34,9 @@
 
 	&__description {
 		color: var(--text-subtle);
-		font-size: 1.5rem;
+		font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+		font-size: clamp(1.5rem, 4vw, 3rem);
 		font-style: italic;
+		letter-spacing: normal;
 	}
 }

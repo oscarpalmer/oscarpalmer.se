@@ -3,20 +3,21 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^3",
 		"@biomejs/biome": "^1.9",
-		"@oscarpalmer/atoms": "^0.77",
-		"@oscarpalmer/oui": "^0.1",
-		"@tabler/icons": "^3.21",
-		"concurrently": "^9",
+		"@oscarpalmer/atoms": "^0.80",
+		"@oscarpalmer/oui": "^0.3",
+		"@tabler/icons": "^3.26",
+		"concurrently": "^9.1",
 		"html-minifier": "^4",
 		"markdown-it": "^14.1",
-		"sass": "^1.80"
+		"sass": "^1.83"
 	},
 	"private": true,
 	"scripts": {
-		"build": "rm -rf ./build && npm run css --style=compressed && eleventy",
-		"css": "sass ./source/assets/stylesheets/styles.scss ./build/assets/stylesheets/styles.css --quiet",
-		"serve": "rm -rf ./build && concurrently \"npm run css --watch\" \"eleventy --quiet --serve\""
+		"build": "rm -rf ./build && npm run css:build && eleventy",
+		"css:build": "sass ./source/assets/stylesheets/styles.scss ./build/assets/stylesheets/styles.css --style=compressed --quiet",
+		"css:watch": "sass ./source/assets/stylesheets/styles.scss ./build/assets/stylesheets/styles.css --quiet --watch",
+		"serve": "rm -rf ./build && concurrently \"npm run css:watch\" \"eleventy --quiet --serve\""
 	},
 	"type": "module",
-	"version": "24.11.1"
+	"version": "24.12.21"
 }

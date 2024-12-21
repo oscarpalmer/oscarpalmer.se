@@ -4,8 +4,9 @@
 	justify-content: space-between;
 	background-color: var(--background-absolute);
 	border-bottom: 1px solid var(--border);
+	border-radius: 0;
 	line-height: 1rem;
-	position: relative;
+	position: sticky;
 	top: 0;
 	z-index: 10;
 
@@ -20,13 +21,7 @@
 		text-shadow: none;
 	}
 
-	@media (min-width: 24em) {
-		& {
-			position: sticky;
-		}
-	}
-
-	@media (min-width: 40em) {
+	@media (min-width: 48em) {
 		& {
 			margin: var(--spacing) 0 0;
 			border-bottom-width: 0;
@@ -47,14 +42,14 @@
 	padding: 1em;
 	background-color: var(--background-absolute);
 	outline: none;
-	border: 2px solid var(--color-green);
+	border: 2px solid var(--oui-green-8);
 	font-size: 1.5rem;
 	line-height: 1;
 	text-align: center;
 	inset: var(--spacing) var(--spacing) auto;
 	z-index: 1000 !important;
 
-	@media (min-width: 40em) {
+	@media (min-width: 48em) {
 		& {
 			inset: var(--spacing) auto auto var(--spacing);
 		}

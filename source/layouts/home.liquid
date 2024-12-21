@@ -1,9 +1,9 @@
 {% assign slug = 'home' %}
 {% layout 'page' %}
 {% block content %}
-	<header class="header">
-		<h1 class="header__title page__home__intro">{{ pages.home.banner.intro.main | i18n }}
+	<header class="content__header header">
+		<h1 class="header__title page__home__intro"><span class="page__home__intro__wave" aria-hidden="true">👋</span>{{ pages.home.banner.intro.main | i18n }}</h1>
 		<h2 class="header__description page__home__blurb">{{ pages.home.banner.blurb | i18n }}</h2>
 	</header>
-	<div class="stack stack-text">{{ pages.home.content | markdown }}</div>
+	<div class="content__content stack stack-text">{{ pages.home.content | markdown }}</div>
 {% endblock %}

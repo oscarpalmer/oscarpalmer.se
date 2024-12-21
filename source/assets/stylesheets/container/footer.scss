@@ -1,11 +1,12 @@
 .footer {
 	grid-area: footer;
-	padding: 1rem;
+	padding: var(--spacing);
 	align-items: center;
 	border-top: 1px solid var(--border);
 	color: var(--text-secondary);
 	font-size: 0.875rem;
 	font-style: italic;
+	line-height: 1.25;
 
 	& > * {
 		width: 100%;

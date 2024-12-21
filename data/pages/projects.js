@@ -31,6 +31,15 @@ export default {
 			},
 			{
 				description: {
+					en: 'A small date and time-library for handling dates and times in web browsers.',
+					sv: 'Ett litet datum- och tidsbibliotek för att hantera datum och tider i webbläsare.',
+				},
+				icon: 'calendar',
+				title: 'Datum',
+				url: 'https://github.com/oscarpalmer/datum',
+			},
+			{
+				description: {
 					en: 'A <i>Stimulus</i>-like framework for developing web components with an attribute-based syntax.',
 					sv: 'Ett <i>Stimulus</i>-liknande ramverk för att utveckla webbkomponenter med en attributbaserad syntax.',
 				},
@@ -55,6 +64,15 @@ export default {
 				icon: 'shield',
 				title: 'Sentinel',
 				url: 'https://github.com/oscarpalmer/sentinel',
+			},
+			{
+				description: {
+					en: 'A collection of badass DOM utilities, for working with elements, events, etc.',
+					sv: 'En samling av grymma DOM-verktyg, för att arbeta med element, events, etc.',
+				},
+				icon: 'car',
+				title: 'Toretto',
+				url: 'https://github.com/oscarpalmer/toretto',
 			},
 		],
 		suffix: {

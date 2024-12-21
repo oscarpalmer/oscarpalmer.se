@@ -16,12 +16,12 @@
 			p {
 				display: flex;
 				flex-flow: column;
-				gap: 1em;
+				gap: .5em;
 				color: var(--text-secondary);
 			}
 		}
 
-		@media (min-width: 40em) {
+		@media (min-width: 48em) {
 			& {
 				width: 8rem;
 				padding: 0.75em;
@@ -60,13 +60,13 @@
 			font-style: italic;
 		}
 
-		@media ((max-width: 40em) and (hover: hover)) or (not (hover: hover)) {
+		@media ((max-width: 48em) and (hover: hover)) or (not (hover: hover)) {
 			&__description {
 				box-shadow: none;
 			}
 		}
 
-		@media (min-width: 40em) and (hover: hover) {
+		@media (min-width: 48em) and (hover: hover) {
 			&__description {
 				padding: 1em;
 				display: none;
@@ -88,7 +88,7 @@
 				}
 			}
 
-			&:hover &__description,
+			&__anchor:hover + &__description,
 			&__anchor:focus + &__description {
 				display: block;
 			}

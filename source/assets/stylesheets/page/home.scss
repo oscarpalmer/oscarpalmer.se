@@ -1,25 +1,49 @@
 .page__home {
-	.banner {
-		@media (min-width: 40em) and (min-height: 32em) {
-			& {
-				top: 50%;
-				transform: translate3d(0, -50%, 0);
-			}
-		}
-	}
-
 	.content {
+		align-items: center;
 		justify-content: center;
 	}
 
 	&__intro,
 	&__blurb {
-		font-size: clamp(1.5rem, 3vw, 3rem);
+		font-family: Charter;
+		font-size: clamp(1.5rem, 4vw, 3rem);
+		font-style: italic;
+		font-weight: normal;
 	}
 
 	&__intro {
-		font-weight: normal;
 		letter-spacing: normal;
 		text-transform: none;
+
+		&__wave {
+			padding: 0 .5em 0 0;
+		}
+	}
+
+	@media (min-width: 48em) and (min-height: 32em) {
+		& {
+			grid-template-areas: 'content' 'footer';
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr auto;
+			gap: 0;
+
+			.banner {
+				margin: 0;
+				position: fixed;
+				inset: var(--spacing) auto auto var(--spacing);
+			}
+		}
+	}
+
+	@media (min-width: 64em) {
+		& {
+			&__intro {
+				&__wave {
+					position: absolute;
+					transform: translate3d(-100%, 0, 0);
+				}
+			}
+		}
 	}
 }

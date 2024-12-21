@@ -1,18 +1,24 @@
+:root {
+	font-size: clamp(100%, 2vw, 150%);
+}
+
 body {
 	display: grid;
-	grid-template-areas: "banner" "content" "footer";
+	grid-template-areas: 'banner' 'content' 'footer';
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr auto;
 	gap: 0;
 	background-color: var(--background);
 	color: var(--text-primary);
-	font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+	font-family: system-ui, sans-serif;
+	font-size: 1rem;
+	letter-spacing: 0.0125em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	@media (min-width: 40em) {
+	@media (min-width: 48em) {
 		& {
-			grid-template-areas: ". banner content ." ". . content ." "footer footer footer footer";
+			grid-template-areas: '. banner content .' '. . content .' 'footer footer footer footer';
 			grid-template-columns:
 				1fr 8rem minmax(20rem, calc(48rem + var(--spacing)))
 				1fr;
@@ -24,30 +30,33 @@ body {
 /** */
 
 a {
-	--anchor-background: transparent;
-	--anchor-color: var(--color-blue);
-	--anchor-shadow: var(--color-blue-rgb);
+	--background: transparent;
 
 	outline: 2px solid transparent;
 	outline-offset: 0.5em;
-	box-shadow: 0 0 0 0.5em var(--anchor-background),
-		inset 0 0 0 100vw var(--anchor-background);
+	box-shadow: 0 0 0 0.5em var(--background), inset 0 0 0 100vw var(--background);
 	border-radius: 1em;
-	color: var(--anchor-color);
+	color: var(--blue);
 	transition: 0.125s ease-in-out;
 
 	&:visited {
-		--anchor-color: var(--color-purple);
-		--anchor-shadow: var(--color-purple-rgb);
+		color: var(--purple);
+
+		svg {
+			stroke: var(--purple);
+		}
 	}
 
 	&:focus {
-		--anchor-background: white;
-		--anchor-color: var(--color-green);
-		--anchor-shadow: var(--color-green-rgb);
+		--background: white;
 
+		color: var(--green);
 		position: relative;
 		z-index: 1;
+
+		svg {
+			stroke: var(--green);
+		}
 	}
 
 	&:focus-visible {
@@ -57,27 +66,33 @@ a {
 
 	@media (hover: hover) {
 		&:hover {
-			--anchor-color: var(--color-green);
-			--anchor-shadow: var(--color-green-rgb);
-		}
-	}
+			color: var(--green);
 
-	&:active {
-		--anchor-color: var(--text-secondary);
-		--anchor-shadow: 0, 0, 0;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		& {
-			text-shadow: 0 0 1em rgba(var(--anchor-shadow), 0.5);
-
-			&:focus {
-				--anchor-background: var(--background-absolute);
+			svg {
+				stroke: var(--green);
 			}
 		}
 	}
 
-	&[aria-current="page"] {
+	&:active {
+		color: var(--text-secondary);
+
+		svg {
+			stroke: var(--text-secondary);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		& {
+			text-shadow: 0 0 1em color-mix(in srgb, currentColor, transparent 50%);
+
+			&:focus {
+				--background: var(--oui-slate-0);
+			}
+		}
+	}
+
+	&[aria-current='page'] {
 		font-style: italic;
 		text-decoration: none;
 
@@ -87,6 +102,10 @@ a {
 			}
 		}
 	}
+
+	svg {
+		transition: stroke 0.125s ease-in-out;
+	}
 }
 
 h1,
@@ -95,11 +114,6 @@ h3,
 hr,
 p {
 	max-width: 40rem;
-}
-
-h1,
-h2 {
-	font-weight: normal;
 }
 
 h2,
@@ -112,8 +126,8 @@ h3 {
 }
 
 h2 {
-	font-size: 1.25rem;
-	font-style: italic;
+	font-size: 1.5rem;
+	font-weight: normal;
 }
 
 h3 {
@@ -130,6 +144,10 @@ svg {
 
 /** */
 
+.emoji {
+	font-style: normal;
+}
+
 .shadow {
 	&-item {
 		box-shadow: 0 0 0 1px rgba(0, 0, 0, var(--opacity)),
@@ -145,5 +163,21 @@ svg {
 			0 4px 8px 0 rgba(0, 0, 0, var(--opacity)),
 			0 8px 16px 0 rgba(0, 0, 0, calc(0.5 * var(--opacity))),
 			0 0 1rem 1rem var(--background);
+	}
+}
+
+.subtitle {
+	color: var(--text-secondary);
+	font-size: 1.125rem;
+	font-style: italic;
+}
+
+::selection {
+	background-color: var(--oui-blue-7);
+	color: white;
+
+	@media (prefers-color-scheme: dark) {
+		background-color: var(--oui-stone-10);
+		color: var(--oui-stone-1);
 	}
 }

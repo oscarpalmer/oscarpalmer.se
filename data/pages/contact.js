@@ -24,6 +24,12 @@ export default {
 				value: 'opalmer&#64;me.com',
 			},
 			{
+				icon: 'brand-bluesky',
+				label: 'Bluesky',
+				url: 'https://bsky.app/profile/oscarpalmer.se',
+				value: '@oscarpalmer.se',
+			},
+			{
 				icon: 'brand-github',
 				label: 'GitHub',
 				url: 'https://github.com/oscarpalmer',

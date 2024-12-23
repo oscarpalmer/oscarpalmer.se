@@ -4,7 +4,7 @@
 
 	@media (min-width: 48em) {
 		& {
-			padding: 1rem 0 0;
+			padding: 0;
 			margin: var(--spacing) 0 0;
 		}
 	}
@@ -25,7 +25,7 @@
 	}
 
 	&__title {
-		color: var(--text-secondary);
+		color: var(--text-subtle);
 		font-size: 0.75rem;
 		font-weight: bold;
 		letter-spacing: 0.1em;
@@ -33,9 +33,9 @@
 	}
 
 	&__description {
-		color: var(--text-subtle);
+		color: var(--text-secondary);
 		font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-		font-size: clamp(1.5rem, 4vw, 3rem);
+		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-style: italic;
 		letter-spacing: normal;
 	}

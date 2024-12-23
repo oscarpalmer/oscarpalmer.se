@@ -2,6 +2,16 @@
 	&__item {
 		&__label {
 			display: inline-flex;
+
+			@media (min-width: 72em) {
+				& {
+					svg {
+						margin: 0 0 0 calc(-1 * (var(--spacing) / 4));
+						position: absolute;
+						transform: translate3d(-100%, 0, 0);
+					}
+				}
+			}
 		}
 
 		&__anchor {

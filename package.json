@@ -19,5 +19,5 @@
 		"serve": "rm -rf ./build && concurrently \"npm run css:watch\" \"eleventy --quiet --serve\""
 	},
 	"type": "module",
-	"version": "24.12.21"
+	"version": "24.12.23"
 }

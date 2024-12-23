@@ -1,5 +1,5 @@
 :root {
-	font-size: clamp(100%, 2vw, 150%);
+	font-size: clamp(100%, 2vw, 125%);
 }
 
 body {
@@ -40,10 +40,10 @@ a {
 	transition: 0.125s ease-in-out;
 
 	&:visited {
-		color: var(--purple);
+		// color: var(--purple);
 
 		svg {
-			stroke: var(--purple);
+			// stroke: var(--purple);
 		}
 	}
 

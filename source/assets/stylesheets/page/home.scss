@@ -21,46 +21,45 @@
 		}
 	}
 
-	@media (min-width: 48em) and (max-width: 78em) {
-		& {
-			grid-template-areas: 'banner' 'content' 'footer';
-			grid-template-columns: 1fr;
-			gap: var(--spacing);
-
-			.banner {
-				width: 24rem;
-				margin: var(--spacing) 0 0 var(--spacing);
-				flex-flow: row;
-
-				&__items {
-					flex-flow: row;
-				}
-			}
-		}
-	}
-
-	@media (min-width: 78em) {
+	@media (min-width: 32em) or (min-width: 48em) {
 		& {
 			grid-template-areas: 'content' 'footer';
 			grid-template-columns: 1fr;
 			grid-template-rows: 1fr auto;
-			gap: var(--spacing);
 
 			.banner {
 				margin: 0;
-				position: fixed;
+				position: absolute;
 				inset: var(--spacing) auto auto var(--spacing);
+
+				&,
+				&__items {
+					flex-flow: row;
+				}
+			}
+
+			.content {
+				padding: calc(5 * var(--spacing)) var(--spacing) var(--spacing);
+				margin: 0;
 			}
 		}
 	}
 
-	@media (min-width: 84em) {
+	@media (min-width: 76em) {
 		& {
-			&__intro {
-				&__wave {
-					position: absolute;
-					transform: translate3d(-100%, 0, 0);
+			.banner {
+				width: 8rem;
+				// margin: 0 0 0 calc(-28rem - var(--spacing));
+				// inset: var(--spacing) auto auto 50%;
+
+				&,
+				&__items {
+					flex-flow: column;
 				}
+			}
+
+			.content {
+				padding: var(--spacing) var(--spacing) 0;
 			}
 		}
 	}

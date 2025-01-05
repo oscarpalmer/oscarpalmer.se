@@ -4,13 +4,13 @@
 {% layout 'page' %}
 {% block content %}
 <article aria-labelledby="intro_title">
-	<header class="visually-hidden">
+	<header class="oui-vh">
 		<h2 id="intro_title">{{ pages.contact.intro.title | i18n }}</h2>
 	</header>
 	<div class="stack stack-text">{{ pages.contact.intro.content | markdown }}</div>
 </article>
 <article aria-labelledby="links_title">
-	<header class="visually-hidden">
+	<header class="oui-vh">
 		<h2 id="links_title">{{ pages.contact.links.title | i18n }}</h2>
 	</header>
 	<ul class="page__contact__links">

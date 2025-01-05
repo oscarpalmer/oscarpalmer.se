@@ -3,8 +3,8 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^3",
 		"@biomejs/biome": "^1.9",
-		"@oscarpalmer/atoms": "^0.80",
-		"@oscarpalmer/oui": "^0.3",
+		"@oscarpalmer/atoms": "^0.81",
+		"@oscarpalmer/oui": "^0.4",
 		"@tabler/icons": "^3.26",
 		"concurrently": "^9.1",
 		"html-minifier": "^4",
@@ -19,5 +19,5 @@
 		"serve": "rm -rf ./build && concurrently \"npm run css:watch\" \"eleventy --quiet --serve\""
 	},
 	"type": "module",
-	"version": "24.12.23"
+	"version": "25.1.5"
 }

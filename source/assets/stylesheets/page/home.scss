@@ -39,18 +39,30 @@
 			}
 
 			.content {
-				padding: calc(5 * var(--spacing)) var(--spacing) var(--spacing);
+				padding: calc((2 * var(--spacing)) + 3rem) var(--spacing) var(--spacing);
 				margin: 0;
 			}
 		}
 	}
 
-	@media (min-width: 76em) {
+	@media (min-width: 48em) {
+		& {
+				&__intro {
+					&__wave {
+						width: 2em;
+						margin: 0 0 0 -2em;
+						display: inline-block;
+						text-align: right;
+						position: relative;
+					}
+				}
+		}
+	}
+
+	@media (min-width: 80em) {
 		& {
 			.banner {
 				width: 8rem;
-				// margin: 0 0 0 calc(-28rem - var(--spacing));
-				// inset: var(--spacing) auto auto 50%;
 
 				&,
 				&__items {
@@ -60,6 +72,19 @@
 
 			.content {
 				padding: var(--spacing) var(--spacing) 0;
+			}
+		}
+	}
+
+	@media (min-width: 80em) and (max-width: 92em) and (max-height: 74em) {
+		& {
+			&__intro {
+				&__wave {
+					width: auto;
+					margin: 0;
+					display: inline;
+					text-align: inherit;
+				}
 			}
 		}
 	}

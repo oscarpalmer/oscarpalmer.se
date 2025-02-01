@@ -8,7 +8,9 @@
 
 	--border: var(--oui-stone-2);
 
-	--opacity: 0.05;
+	--opacity: 92.5%;
+
+	--shadow: var(--oui-stone-8);
 
 	--text-primary: var(--oui-stone-9);
 	--text-secondary: var(--oui-stone-8);
@@ -20,20 +22,18 @@
 
 	@media (prefers-color-scheme: dark) {
 		& {
-			--background: var(--oui-slate-2);
-			--background-absolute: var(--oui-slate-3);
+			--background: var(--oui-slate-0);
+			--background-absolute: var(--oui-slate-1);
 
-			--border: var(--oui-slate-4);
+			--border: var(--oui-slate-2);
 
-			--opacity: 0.25;
+			--opacity: 75%;
+
+			--shadow: black;
 
 			--text-primary: var(--oui-slate-8);
-			--text-secondary: var(--oui-slate-7);
-			--text-subtle: var(--oui-slate-6);
-
-			--blue: var(--oui-blue-8);
-			--green: var(--oui-green-8);
-			--purple: var(--oui-purple-8);
+			--text-secondary: var(--oui-slate-6);
+			--text-subtle: var(--oui-slate-5);
 		}
 	}
 }

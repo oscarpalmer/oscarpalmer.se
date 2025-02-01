@@ -58,15 +58,6 @@ export default {
 			},
 			{
 				description: {
-					en: 'My own little version of a state management library for web applications.',
-					sv: 'Min egna lilla version av ett signalbibliotek för tillståndshantering i webbapplikationer.',
-				},
-				icon: 'shield',
-				title: 'Sentinel',
-				url: 'https://github.com/oscarpalmer/sentinel',
-			},
-			{
-				description: {
 					en: 'A collection of badass DOM utilities, for working with elements, events, etc.',
 					sv: 'En samling av grymma DOM-verktyg, för att arbeta med element, events, etc.',
 				},

@@ -4,7 +4,7 @@ export default {
 	banner: {
 		blurb: {
 			en: 'I design, develop, and evalute things for cool people who use computers',
-			sv: 'Jag designar, utvecklar, och utvärderar saker för coola personer som avänder datorer',
+			sv: 'Jag designar, utvecklar, och utvärderar saker för coola personer som använder datorer',
 		},
 		intro: {
 			main: {

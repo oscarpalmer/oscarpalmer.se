@@ -49,6 +49,15 @@ export default {
 			},
 			{
 				description: {
+					en: 'A small library for working with <a href="https://github.com/tc39/proposal-signals?tab=readme-ov-file#background-why-signals">signals</a> in <i>JavaScript</i>.',
+					sv: 'Ett litet bibliotek för att arbeta med <a href="https://github.com/tc39/proposal-signals?tab=readme-ov-file#background-why-signals" hreflang="en">signaler</a> i <i>JavaScript</i>.',
+				},
+				icon: 'books',
+				title: 'Mora',
+				url: 'https://github.com/oscarpalmer/mora',
+			},
+			{
+				description: {
 					en: 'A collection of styles, components, and utilities for building websites and applications.',
 					sv: 'En samling av stilar, komponenter, och verktyg för att bygga webbsidor och applikationer.',
 				},

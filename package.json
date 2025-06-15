@@ -1,15 +1,15 @@
 {
 	"name": "oscarpalmer.se",
 	"devDependencies": {
-		"@11ty/eleventy": "^3",
+		"@11ty/eleventy": "^3.1",
 		"@biomejs/biome": "^1.9",
-		"@oscarpalmer/atoms": "^0.82.1",
-		"@oscarpalmer/oui": "^0.8",
-		"@tabler/icons": "^3.29",
+		"@oscarpalmer/atoms": "^0.102",
+		"@oscarpalmer/oui": "^0.10",
+		"@tabler/icons": "^3.34",
 		"concurrently": "^9.1",
 		"html-minifier": "^4",
 		"markdown-it": "^14.1",
-		"sass": "^1.83"
+		"sass": "^1.89"
 	},
 	"private": true,
 	"scripts": {
@@ -19,5 +19,5 @@
 		"serve": "rm -rf ./build && concurrently \"npm run css:watch\" \"eleventy --quiet --serve\""
 	},
 	"type": "module",
-	"version": "25.2.1"
+	"version": "25.6.15"
 }

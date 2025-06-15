@@ -50,6 +50,16 @@ export default {
 			},
 			{
 				description: {
+					en: 'A post-apocalyptic game world, with a nice mix of humour and seriousness, and a lot of interesting stories.',
+					sv: 'En postapokalyptisk spelvärld, med en fin blandning av humor och allvar, och mycket många historier.',
+				},
+				icon: 'device-gamepad-2',
+				id: 'fallout',
+				title: 'Fallout',
+				url: 'https://fallout.bethesda.net',
+			},
+			{
+				description: {
 					en: 'My second favourite football club, which I have followed since 2004, when Henrik Larsson started playing for them. <i lang="ca">Més que un club</i><span class="emoji" aria-hidden="true">&nbsp;💕</span>',
 					sv: 'Min andra favoritklubb i fotboll, som jag följt sedan 2004, då Henrik Larsson började spela för dem. <i lang="ca">Més que un club</i><span class="emoji" aria-hidden="true">&nbsp;💕</span>',
 				},
@@ -78,7 +88,7 @@ export default {
 				title: 'Manchester United',
 				url: 'https://www.manutd.com/',
 			},
-			{
+			/* {
 				description: {
 					en: 'One of my favourite streamers who does a lot of fun stuff, often with friends, either in the kitchen or around Austin <i>(and elsewhere)</i>.',
 					sv: 'En av mina favoritstreamers som gör mycket skoj, ofta med vänner, antingen i köket eller runt om i Austin <i>(och andra ställen)</i>.',
@@ -87,7 +97,7 @@ export default {
 				id: 'nmplol',
 				title: 'Nmplol',
 				url: 'https://www.twitch.tv/nmplol',
-			},
+			}, */
 			{
 				description: {
 					en: 'Regular TV shows are fine, but sometimes you need something more bombastic, and then there is not much better than wrestling.',
@@ -101,7 +111,7 @@ export default {
 			{
 				description: {
 					en: 'Marvel has always been good, and X-Men has always been my favourite group; interesting characters and good stories, often with a political undertone.',
-					sv: 'Marvel har alltid varit bra, och X-Men har alltid varit min favoritgrupp; intressanta karaktärer och bra berättelser, ofta med en politisk underton.',
+					sv: 'Marvel har alltid varit bra, och X-Men har alltid varit min favoritgrupp; intressanta karaktärer och bra historier, ofta med en politisk underton.',
 				},
 				icon: 'sparkles',
 				id: 'x_men',

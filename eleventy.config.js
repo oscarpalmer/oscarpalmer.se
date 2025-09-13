@@ -36,8 +36,7 @@ export default (config) => {
 
 	config.addFilter('altLocale', filters.getAlternateLocale);
 	config.addFilter('ariaCurrent', filters.getAriaCurrentFromUrl);
-	config.addFilter('icon', filters.icon);
-	config.addFilter('i18n', filters.internationalise);
+	config.addFilter('i18n', filters.internationalize);
 	config.addFilter('locale', filters.getLocale);
 	config.addFilter('markdown', filters.renderMarkdown);
 

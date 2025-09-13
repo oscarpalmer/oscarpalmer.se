@@ -1,42 +1,48 @@
 .content {
-	grid-area: content;
-	padding: var(--spacing);
+	padding: calc(2 * var(--spacing)) var(--spacing);
 
-	@media (min-width: 48em) {
-		& {
-			padding: 0;
-			margin: var(--spacing) 0 0;
-		}
+	&__section {
+		width: 100%;
+		max-width: 40rem;
 	}
 }
 
-.header {
-	max-width: 48rem;
-	padding: 0 0 var(--spacing);
+.list,
+.markdown ul {
+	padding: 0 0 0 1rem;
 	display: flex;
-	flex-flow: column;
-	gap: calc(var(--spacing) / 2);
-	border-bottom: 1px solid var(--border);
+	flex-flow: column nowrap;
+	gap: .5em;
+	list-style: none;
 
-	&__title,
-	&__description {
-		font-weight: normal;
-		line-height: 1.25;
-	}
-
-	&__title {
-		color: var(--text-subtle);
-		font-size: 0.75rem;
+	h2,
+	h3 {
+		font-family: inherit;
+		font-size: 1rem;
+		font-style: normal;
 		font-weight: bold;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
+		line-height: inherit;
 	}
 
-	&__description {
-		color: var(--text-secondary);
-		font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-		font-size: clamp(1.25rem, 4vw, 2rem);
-		// font-style: italic;
-		letter-spacing: normal;
+	li {
+		position: relative;
+
+		&::before {
+			content: '-';
+			width: 1rem;
+			font-family: ui-monospace, monospace;
+			position: absolute;
+			left: -1rem;
+		}
+	}
+
+	@media screen and (min-width: 42rem) {
+		padding: 0;
+	}
+}
+
+.markdown {
+	hr {
+		margin: var(--spacing) 0;
 	}
 }

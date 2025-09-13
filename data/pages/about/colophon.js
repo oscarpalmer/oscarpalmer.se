@@ -47,10 +47,6 @@ export default {
 			title: 'Sass',
 			url: 'https://sass-lang.com/',
 		},
-		tabler: {
-			title: 'Tabler',
-			url: 'https://tabler.io/icons/',
-		},
 		vscode: {
 			title: 'Visual Studio Code',
 			url: 'https://code.visualstudio.com/',

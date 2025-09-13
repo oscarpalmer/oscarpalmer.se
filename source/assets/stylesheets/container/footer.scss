@@ -1,15 +1,13 @@
 .footer {
-	grid-area: footer;
-	padding: var(--spacing);
-	align-items: center;
-	border-top: 1px solid var(--border);
-	color: var(--text-secondary);
-	font-size: .75rem;
-	font-style: italic;
-	line-height: 1.125;
-
-	& > * {
+	&__content {
 		width: 100%;
 		max-width: 40rem;
+		padding: var(--spacing);
+		border-top: 1px solid var(--border, black);
+		font-size: .875rem;
+
+		@media screen and (min-width: 41rem) {
+			padding: var(--spacing) 0;
+		}
 	}
 }

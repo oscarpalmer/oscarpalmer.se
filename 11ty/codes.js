@@ -4,7 +4,7 @@ import filters from './filters.js';
 function getDescription() {
 	const {description} = this.ctx.scopes[0];
 
-	return filters.internationalise.call(this, description ?? meta.description);
+	return filters.internationalize.call(this, description ?? meta.description);
 }
 
 function getTitle() {
@@ -13,7 +13,7 @@ function getTitle() {
 	return `${
 		title == null
 			? ''
-			: `${filters.internationalise.call(this, title)} &ndash; `
+			: `${filters.internationalize.call(this, title)} &ndash; `
 	}${meta.author}`;
 }
 

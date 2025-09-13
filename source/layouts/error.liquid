@@ -5,21 +5,20 @@
 <!doctype html>
 <html dir="ltr" lang="sv">
 	{% include 'head' %}
-	<body class="page__error__body">
-		<main class="page__error" role="main">
-			<article>
-				<span aria-hidden="true" class="page__error__flag">🇸🇪</span>
+	<body class="page__error">
+		<main class="stack content" role="main">
+			<article class="stack stack-text">
 				<header>
 					<h1>404 &ndash; {{ pages.error.description.sv }}</h1>
 				</header>
 				<p>Sidan du försöker besöka verkar inte finnas… vill du <a href="/">gå hem</a>, i stället?</p>
 			</article>
-			<article>
-				<span aria-hidden="true" class="page__error__flag">🇬🇧</span>
+			<hr>
+			<article class="stack stack-text" lang="en">
 				<header>
 					<h2>404 &ndash; {{ pages.error.description.en }}</h2>
 				</header>
-				<p lang="en">
+				<p>
 					The page you're trying to visit doesn't seem to exist… would you like to <a href="/en/">go home</a>, instead?
 				</p>
 			</article>

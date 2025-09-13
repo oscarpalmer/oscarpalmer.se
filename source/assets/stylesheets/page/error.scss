@@ -1,91 +1,17 @@
 .page__error {
-	& {
-		--drop-shadow-colour: var(--border);
-		--drop-shadow-size: 2px;
+	padding: var(--spacing);
+	align-items: center;
+	justify-content: center;
 
-		grid-area: error;
-		filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.125));
-		background: var(--background-absolute);
-		border-radius: clamp(0.5rem, 1vw, 1rem);
+	.content {
+		width: 100%;
+		max-width: 40rem;
+		padding: 0;
+		margin: 0;
 	}
 
-	&__body {
-		display: grid;
-		grid-template-areas: ". . ." ". error ." ". . .";
-		grid-template-columns: 1fr auto 1fr;
-		grid-template-rows: 1fr auto 1fr;
-		gap: var(--spacing);
-	}
-
-	&__flag {
-		--size: 1.5rem;
-
-		grid-area: flag;
-		width: var(--size);
-		height: var(--size);
-		align-self: center;
-		background-color: var(--background-absolute);
-		border-radius: var(--size);
-		line-height: var(--size);
-		text-align: center;
-
-		@media (min-width: 48em) {
-			& {
-				--size: 3rem;
-
-				margin: 0 calc((-1 * var(--spacing)) - (0.5 * var(--size)));
-			}
-		}
-	}
-
-	article {
-		padding: var(--spacing);
-		display: grid;
-		grid-template-areas: "flag header" "flag message";
-		grid-template-columns: auto 1fr;
-		grid-template-rows: auto auto;
-		column-gap: var(--spacing);
-		row-gap: calc(var(--spacing) / 2);
-		position: relative;
-
-		&:first-of-type {
-			border-bottom: 1px solid var(--border);
-
-			h1,
-			h2 {
-				font-size: 1.25rem;
-			}
-		}
-
-		&:last-of-type {
-			font-size: 0.875rem;
-			font-style: italic;
-
-			h1,
-			h2 {
-				font-size: 1rem;
-			}
-		}
-
-		@media (min-width: 48em) {
-			& {
-				column-gap: 0;
-			}
-		}
-	}
-
-	header {
-		grid-area: header;
-	}
-
-	p {
-		grid-area: message;
-		max-width: 24rem;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		& {
-			filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.5));
-		}
+	h1,
+	h2 {
+		font-size: 1.25rem;
 	}
 }

@@ -3,14 +3,16 @@
 {% assign title = pages.about.index.title %}
 {% layout 'page' %}
 {% block content %}
-<ul class="stack">
-	{% for link in pages.about.index.links %}
-		<li class="stack stack-text">
-			<h2>
-				<a href="{{ link.url | i18n }}">{{ link.title | i18n }}</a>
-			</h2>
-			<p>{{ link.description | i18n }}</p>
-		</li>
-	{% endfor %}
-</ul>
+<div class="content__section">
+	<ul class="list">
+		{% for link in pages.about.index.links %}
+			<li>
+				<h2>
+					<a href="{{ link.url | i18n }}">{{ link.title | i18n }}</a>
+				</h2>
+				<p>{{ link.description | i18n }}</p>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
 {% endblock %}

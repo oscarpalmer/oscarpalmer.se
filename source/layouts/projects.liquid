@@ -3,49 +3,51 @@
 {% assign title = pages.projects.title %}
 {% layout 'page' %}
 {% block content %}
-<article aria-labelledby="work_title" class="stack">
-	<header class="stack">
+<article class="stack content__section" aria-labelledby="work_title">
+	<header>
 		<h2 id="work_title">{{ pages.projects.work.title | i18n }}</h2>
-		<p class="subtitle">{{ pages.projects.work.description | i18n }}</p>
 	</header>
-	<ul class="grid grid-large">
+
+	<div>
+		<ul class="list">
 		{% for project in pages.projects.work.items %}
-			<li class="stack stack-text">
+			<li>
 				<header>
-					<h3 class="flow flow-text page__projects__item__label">
-						{{ project.icon | icon -}}
+					<h3>
 						{{- project.title | i18n }}
 					</h3>
 				</header>
-				<div class="stack stack-text">{{ project.description | markdown }}</div>
+				<div>{{ project.description | markdown }}</div>
 			</li>
 		{% endfor %}
 	</ul>
+	</div>
 </article>
+
 <hr>
-<article aria-labelledby="personal_title" class="stack">
-	<header class="stack">
+
+<article class="stack content__section" aria-labelledby="personal_title">
+	<header>
 		<h2 id="personal_title">{{ pages.projects.personal.title | i18n }}</h2>
-		<p class="subtitle">{{ pages.projects.personal.description | i18n }}</p>
 	</header>
-	<ul class="grid grid-small">
+
+	<ul class="list">
 		{% for project in pages.projects.personal.items %}
-			<li class="stack stack-text">
+			<li>
 				<header>
-					<h3 class="page__projects__item__label">
-						<a class="flow flow-text page__projects__item__anchor" href="{{ project.url }}" hreflang="en">
-							{{- project.icon | icon -}}
+					<h3>
+						<a href="{{ project.url }}" hreflang="en">
 							{{- project.title -}}
 						</a>
 					</h3>
 				</header>
-				<div class="stack stack-text">{{ project.description | markdown }}</div>
+
+				<div>{{ project.description | markdown }}</div>
 			</li>
 		{% endfor %}
-		<li class="page__projects__personal__suffix">
-			{{ pages.projects.personal.suffix | i18n }}
-			<a href="https://github.com/oscarpalmer" hreflang="en">GitHub</a>&hellip;
-		</li>
 	</ul>
+
+	<p>{{ pages.projects.personal.suffix | i18n }}
+			<a href="https://github.com/oscarpalmer" hreflang="en">GitHub</a>.</p>
 </article>
 {% endblock %}

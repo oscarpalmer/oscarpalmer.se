@@ -1,13 +1,12 @@
 {
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1",
-		"@biomejs/biome": "^2.2",
-		"@oscarpalmer/atoms": "^0.108",
-		"@oscarpalmer/oui": "^0.17",
+		"@11ty/eleventy": "4.0.0-alpha.6",
+		"@oscarpalmer/atoms": "^0.124",
+		"@oscarpalmer/oui": "^0.19",
 		"concurrently": "^9.2",
 		"html-minifier": "^4",
 		"markdown-it": "^14.1",
-		"sass": "^1.92"
+		"sass": "^1.97"
 	},
 	"license": "MIT",
 	"name": "oscarpalmer.se",
@@ -19,5 +18,5 @@
 		"serve": "rm -rf ./build && concurrently \"npm run css:watch\" \"eleventy --quiet --serve\""
 	},
 	"type": "module",
-	"version": "25.9.13"
+	"version": "26.1.2"
 }

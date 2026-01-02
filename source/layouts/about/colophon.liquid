@@ -3,5 +3,5 @@
 {% assign title = pages.about.colophon.title %}
 {% layout 'page' %}
 {% block content %}
-<article class="stack stack-text markdown  content__section">{{ pages.about.colophon.content | markdown: pages.about.colophon.links }}</article>
+<article class="stack stack--text markdown content__section">{{ pages.about.colophon.content | markdown: pages.about.colophon.links }}</article>
 {% endblock %}

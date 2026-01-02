@@ -4,9 +4,9 @@
 	<body class="page__{{ slug }}">
 		{% include 'banner' %}
 
-		<main class="fill stack flex-ai-c content" id="content">
+		<main class="fill stack flex-ai--c content" id="content">
 			{% if title %}
-				<header class="stack stack-text content__section">
+				<header class="stack stack--text content__section">
 					<h1>{{ title | i18n }}</h1>
 					{% if description %}
 						<p>{{ description | i18n }}</p>

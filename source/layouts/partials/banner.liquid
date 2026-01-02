@@ -1,28 +1,28 @@
 <a class="oui-vh banner__skip" href="{{ page.url }}#content">{{ misc.skip | i18n }}</a>
 
-<header class="flex-ai-c banner">
-  <div class="banner__content">
-    <a class="flex-as-fs banner__home" href="{{ pages.home.url | i18n }}" {{ pages.home.url | ariaCurrent }}>{{ meta.author }}</a>
+<header class="flex-ai--c banner">
+	<div class="banner__content">
+		<a class="flex-as--fs banner__home" href="{{ pages.home.url | i18n }}" {{ pages.home.url | ariaCurrent }}>{{ meta.author }}</a>
 
-    <nav class="banner__navigation">
-      <ul class="flow flow-text">
-        {% for item in urls.navigation %}
-          <li>
-            <a href="{{ item.url | i18n }}" {{ item.url | ariaCurrent }}>{{ item.title | i18n }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
+		<nav class="banner__navigation">
+			<ul class="flow flow--text">
+				{% for item in urls.navigation %}
+					<li>
+						<a href="{{ item.url | i18n }}" {{ item.url | ariaCurrent }}>{{ item.title | i18n }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
 
-  <div class="banner__language">
-    <p>
+	<div class="banner__language">
+		<p>
 			<a href="{{ urls.store[page.url] }}" title="{{ footer.language.prefix | i18n }} {{ footer.language.suffix | i18n }}">
-      <span aria-hidden="true">{{ misc.language | i18n }}?</span>
-      <span class="oui-vh">
-        {{ footer.language.prefix | i18n -}} {{- footer.language.suffix | i18n }}
-      </span>
-    </a>
+			<span aria-hidden="true">{{ misc.language | i18n }}?</span>
+			<span class="oui-vh">
+				{{ footer.language.prefix | i18n -}} {{- footer.language.suffix | i18n }}
+			</span>
+		</a>
 		</p>
-  </p>
+	</p>
 </header>

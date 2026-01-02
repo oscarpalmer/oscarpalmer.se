@@ -3,14 +3,14 @@
 {% assign title = pages.contact.title %}
 {% layout 'page' %}
 {% block content %}
-<article class="stack stack-text content__section" aria-labelledby="links_title">
+<article class="stack stack--text content__section" aria-labelledby="links_title">
 	<header class="oui-vh content__header">
 		<h2 id="links_title">{{ pages.contact.links.title | i18n }}</h2>
 	</header>
 
 	<ul class="list">
 		{% for link in pages.contact.links.items %}
-			<li class="stack stack-small contact__list__item">
+			<li class="stack stack--small contact__list__item">
 				<h3>{{ link.label | i18n -}}<span aria-hidden="true">:</span></h3>
 				<p>
 					<a href="{{ link.url }}">
